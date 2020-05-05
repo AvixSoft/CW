@@ -171,7 +171,7 @@ playerData.onConnect = function(socket, username, icon, repPoints) {
                 playerMSGname: player.username,
                 players: [player],
                 playerIcons: player.icon,
-                map: "null",
+                map: "enetivia",
                 playersReady: 0,
              })
              sessionList[sessionList.length - 1].creator.id = socket.id
@@ -202,20 +202,6 @@ playerData.onConnect = function(socket, username, icon, repPoints) {
                 sessionList[index].players[i].nation = nation
                 socket.broadcast.emit('clientSessionListUpdate', sessionList)
             }
-        }
-    })
-    socket.on('changeMapDataLeft', function(mapChose, index) {
-        for(let i = 0; i < sessionList[index].players.length; i++) {
-            sessionList[index].mapName = mapChose
-            console.log(mapChose)
-            socket.broadcast.emit('clientSessionListUpdate', sessionList)
-        }
-    })
-    socket.on('changeMapDataRight', function(mapChose, index) {
-        for(let i = 0; i < sessionList[index].length; i++) {
-            sessionList[index].mapName = mapChose 
-            console.log(mapChose)
-            socket.broadcast.emit('clientSessionListUpdate', sessionList)
         }
     })
     socket.on('changeIcon', function(icon, index) {
