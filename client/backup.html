@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Colonial Warfare</title>
+  <link rel="stylesheet" type="text/css" href="/client/css/gameStyle.css">
+  <link rel="stylesheet" type="text/css" href="/client/css/militaryUnitStyle.css">
+  <link rel="icon" href="/img/mainIcon.png">
+
+</head>
+<style>* {padding: 0; margin: 0}</style>
+<body oncontextmenu="return false;">
+<!-- partial:index.partial.html -->
+<body>
+  <div id="mainX">
+    <div id="mainTitle">COLONIAL</div>
+    <div id="mainSubTitle">WARFARE</div>
+    <button class="fancyButton" id="playGameButton">Skirmish</button><br>
+    <button class="fancyButton">History</button><br>
+    <button class="fancyButton">Settings</button><br>
+    <button class="fancyButton">Discord</button><br>
+    <button class="fullscreenButton" id="fullscreenButton">⇲</button><br>
+    <button id="audioManager" class="audioButton">🕨</button><br>
+  </div>
+<div id="actualGame">
+<div class="module" id="module">
+  <div id="locationsForEverything">
+    <div id="quebecLocation">
+      <div id="quebecCity">
+        <div id="quebecTab">
+        <div id="quebecName">✯ Quebec</div>
+      </div>
+      </div>
+    </div>
+    <div id="jamestownLocation">
+      <div id="jamestownCity">
+        <div id="jamestownTab">
+        <div id="jamestownName">✯ Jamestown</div>
+      </div>
+      </div>
+    </div>
+    <div id="santoDomingoLocation">
+      <div id="santoDomingoCity">
+        <div id="santoDomingoTab">
+        <div id="santoDomingoName">✯ Santo Domingo</div>
+      </div>
+      </div>
+    </div>
+    <div id="newAmsterdamLocation">
+      <div id="newAmsterdamCity">
+        <div id="newAmsterdamTab">
+        <div id="newAmsterdamName">✯ New Amsterdam</div>
+      </div>
+      </div>
+    </div>
+
+    <div id="JT_FLAG"></div>
+    <div id="QB_FLAG"></div>
+    <div id="SD_FLAG"></div>
+    <div id="NA_FLAG"></div>
+
+    <div id="dutchNavy"></div>
+    <div id="dutchArmy"></div>
+    <div id="spanishNavy"></div>
+    <div id="spanishArmy"></div>
+    <div id="frenchNavy"></div>
+    <div id="frenchArmy"></div>
+    <div id="englishNavy"></div>
+    <div id="englishArmy"></div>
+    <div id="ns1Location">
+      <div id="ns1City">
+        <div id="ns1Tab">
+        <div id="ns1Name">Pocitawi</div>
+      </div>
+      </div>
+    </div>
+    <div id="ns2Location">
+      <div id="ns2City">
+        <div id="ns2Tab">
+        <div id="ns2Name">Chitzao</div>
+      </div>
+      </div>
+    </div>
+    <div id="ns3Location">
+      <div id="ns3City">
+        <div id="ns3Tab">
+        <div id="ns3Name">Tetlamyn</div>
+      </div>
+      </div>
+    </div>
+    <div id="ns4Location">
+      <div id="ns4City">
+        <div id="ns4Tab">
+        <div id="ns4Name">Zeztitasu</div>
+      </div>
+      </div>
+    </div>
+    <div id="ns5Location">
+      <div id="ns5City">
+        <div id="ns5Tab">
+        <div id="ns5Name">Wactinu</div>
+      </div>
+      </div>
+    </div>
+    <div id="ns6Location">
+      <div id="ns6City">
+        <div id="ns6Tab">
+        <div id="ns6Name">Vatimium</div>
+      </div>
+      </div>
+    </div>
+    <div id="quebecDock"></div>
+    <div id="jamestownDock"></div>
+    <div id="santoDomingoDock"></div>
+    <div id="newAmsterdamDock"></div>
+  </div>
+  <div id="locationsForEurope">
+    <div id="londonEuropeLocation">
+      <div id="londonEuropeCity">
+        <div id="londonEuropeTab">
+        <div id="londonEuropeName">✯ London</div>
+      </div>
+      </div>
+    </div>
+    <div id="edinburghEuropeLocation">
+      <div id="edinburghEuropeCity">
+        <div id="edinburghEuropeTab">
+        <div id="edinburghEuropeName">Edinburgh</div>
+      </div>
+      </div>
+    </div>
+    <div id="parisEuropeLocation">
+      <div id="parisEuropeCity">
+        <div id="parisEuropeTab">
+        <div id="parisEuropeName">✯ Paris</div>
+      </div>
+      </div>
+    </div>
+    <div id="bordeauxEuropeLocation">
+      <div id="bordeauxEuropeCity">
+        <div id="bordeauxEuropeTab">
+        <div id="bordeauxEuropeName">Bordeaux</div>
+      </div>
+      </div>
+    </div>
+    <div id="madridEuropeLocation">
+      <div id="madridEuropeCity">
+        <div id="madridEuropeTab">
+        <div id="madridEuropeName">✯ Madrid</div>
+      </div>
+      </div>
+    </div>
+    <div id="sevilleEuropeLocation">
+      <div id="sevilleEuropeCity">
+        <div id="sevilleEuropeTab">
+        <div id="sevilleEuropeName">Seville</div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fog-img fog-img-first"></div>
+<div class="fog-img fog-img-second"></div>
+<div id="mainSelectionTabs">
+  <button id="engChoice" class="britonsChoice">England</button>
+  <button id="frnChoice" class="britonsChoice">France</button>
+  <button id="dutChoice" class="britonsChoice">Netherlands</button>
+  <button id="spnChoice" class="britonsChoice">Spain</button>
+</div>
+<div id="nationMenuInfo">
+  <div id="nationFlag"></div>
+  <div id="civInfo">Click on civilization to see information about it</div>
+</div>
+<div id="rulerTab">
+  <div id="rulerIcon"></div>
+  <div id="rulerInfo">Click on civilization to see information about your nation's ruler.</div>
+</div>
+<div id="homeCitySelectTab">
+  <div id="homeCitySelectImage"></div>
+  <div id="homeCitySelectInfo"></div>
+</div>
+<div id="tabs">
+<div id="statsTab">
+  <div id="rulerName"></div>
+  <div id="currentWealth"></div>
+  <div id="currentIncome"></div>
+  <div id="armyPop"></div>
+</div>
+<div id="historyTab">
+  <div id="currentYear"></div>
+  <div id="currentAge"></div>
+  <div id="turnCount"></div>
+</div>
+<div id="militaryUnitsTab">
+  <div id="unitMusketmen">
+    <div id="unitMusketmenIcon"></div>
+  </div>
+  <div id="unitNavy">
+    <div id="unitNavyIcon"></div>
+  </div>
+  <div id="unitDefender">
+    <div id="unitDefenderIcon"></div>
+  </div>
+  <div id="unitInfoTab">
+    <div id="unitInfo">Hover over troops to see info</div>
+  </div>
+</div>
+
+<div id="cityTravelList">
+  <div id="travelOptions">
+    <div id="quebecFlag"></div>
+    <div id="quebecTravelButton">
+      <div id="quebecTravelName"></div>
+    </div>
+    <div id="jamestownFlag"></div>
+    <div id="jamestownTravelButton">
+      <div id="jamestownTravelName"></div>
+    </div>
+    <div id="santoDomingoFlag"></div>
+    <div id="santoDomingoTravelButton">
+      <div id="santoDomingoTravelName"></div>
+    </div>
+    <div id="newAmsterdamFlag"></div>
+    <div id="newAmsterdamTravelButton">
+      <div id="newAmsterdamTravelName"></div>
+    </div>
+    <div id="ns1Flag"></div>
+    <div id="ns1TravelButton">
+      <div id="ns1TravelName"></div>
+    </div>
+    <div id="ns2Flag"></div>
+    <div id="ns2TravelButton">
+      <div id="ns2TravelName"></div>
+    </div>
+    <div id="ns3Flag"></div>
+    <div id="ns3TravelButton">
+      <div id="ns3TravelName"></div>
+    </div>
+    <div id="ns4Flag"></div>
+    <div id="ns4TravelButton">
+      <div id="ns4TravelName"></div>
+    </div>
+    <div id="ns5Flag"></div>
+    <div id="ns5TravelButton">
+      <div id="ns5TravelName"></div>
+    </div>
+    <div id="ns6Flag"></div>
+    <div id="ns6TravelButton">
+      <div id="ns6TravelName"></div>
+    </div>
+    <div id="travelRefresh">Refresh</div>
+    <div id="travelClose">Close</div>
+  </div>  
+</div>
+<!-- <div id="travelHeader">
+  <div id="travelName">Travel</div>
+  <div id="travelMenuClose"></div>
+</div> -->
+<div id="cityTab">
+  <div id="cityName">City Name</div>
+  <!-- <div id="cityFoundedYear">1600</div> -->
+  <div id="cityIcon"></div>
+  <div id="cityOwner">Some Nation</div>
+  <button id="buildMenuButton" class="britonsChoice">Build</button>
+  <button id="recruitMenuButton" class="britonsChoice">Recruit</button>
+  <button id="colonizeMenuButton" class="britonsChoice">Colonize</button>
+  <button id="travelMenuButton" class="britonsChoice">Travel</button>
+  <button id="attackMenuButton" class="britonsChoice">Attack</button>
+  <button id="siegeMenuButton" class="britonsChoice">Siege</button>
+  <button id="tradeMenuButton" class="britonsChoice">Trade</button>
+</div>
+<div id="ageTab">
+  <div id="ageIcon"></div>
+  <div id="ageName">Age of Exploration</div>
+  <div id="ageYears">(1492 - 1623)</div>
+  <div id="ageInfoTab">
+    <div id="ageInfo">The so-called Age of Exploration was a period during which European ships were traveled around the world to search for new trading routes and partners to feed burgeoning capitalism in Europe.</div>
+  </div>
+  <button id="moreInfoButton" class="closeButton">More Info</button>
+  <button id="closeButtonJS" class="closeButton">Continue</button>
+</div>
+<div id="selectNavyButton">
+  <div id="navyIcon"></div>
+</div>
+<div id="selectArmyButton">
+  <div id="muskIcon"></div>
+</div>
+<div id="selectCapitalButton">
+  <div id="capitalIcon"></div>
+</div>
+<div id="newsTab">
+  <div id="newsInfo">Welcome to Colonial Warfare!</div>
+</div>
+      <div id="endTurnTab">
+          <!-- <button id="deployTroopsButton" class="testButton">Recruit</button> -->
+          <button id="endTurnButton" class="testButton">End Turn</button>
+      </div>
+
+      <div id="mapToolsTab">
+        <button id="zoomInMapButton" class="toolMapButton">+</button>
+        <button id="zoomOutMapButton" class="toolMapButton">-</button>
+        <button id="hideMovesButton" class="toolMapButton">&#8599</button>
+        <button id="fullscreenMapButton" class="toolMapButton">⇲</button>
+    </div>
+    <div id="iconTab">
+      <div id="rulerIconForTab"> </div>
+    </div>
+    <div id="mapMoveTab">
+      <button id="moveUpButton" class="toolMapButton">&#8593</button>
+      <button id="moveDownButton" class="toolMapButton">&#8595</button>
+      <button id="moveLeftButton" class="toolMapButton">&#8592</button>
+      <button id="moveRightButton" class="toolMapButton">&#8594</button>
+    </div>
+  </div>
+</div>
+<div id="loadingScreen">
+<div id="topWoodLoad"></div>
+<div id="bottomWoodLoad"></div>
+</div>
+</body>
+<!-- partial -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script  src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+  <script  src="/client/js/recruitMenu.js"></script>
+  <script  src="/client/js/capitalColonySelect.js"></script>
+  <script  src="/client/js/nativeSettlements.js"></script>
+  <script  src="/client/js/cityPicker.js"></script>
+  <script  src="/client/js/settlementShortcuts.js"></script>
+  <script  src="/client/js/colonizeInfo.js"></script>
+  <script  src="/client/js/unitData.js"></script>
+  <script  src="/client/js/mainGame.js"></script>
+  <script  src="/client/js/eventListeners.js"></script>
+  <script>
+    var socket = io()
+  </script>
+</body>
+</html>

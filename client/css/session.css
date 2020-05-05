@@ -1,0 +1,1139 @@
+#sessionStatus-box {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: inline-block;
+    font-size: 15px;
+    width: calc(100vw - 900px);
+    height: 40px;
+    display: inline-block;
+    color:white;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.25s;
+}
+#sessionStatus-info {
+    font-family: Trebuchet MS;
+    font-weight: bold;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-indent: 0px;
+    padding: 10px;
+}
+#matchSession-lobbyBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 0px;
+    display: inline-block;
+    font-size: 15px;
+    width: calc(100vw - 900px);
+    height: calc(100vh - 250px);
+    display: inline-block;
+    color:white;
+    margin-top: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.25s;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+#createMatchButton {
+    text-align: center;
+    font-family: Trebuchet MS;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    font-size: 20px;
+    width: 150px;
+    height: 40px;
+    display: inline-block;
+    color:white;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 8px;
+    border:none;
+    background-color: rgba(0,0,0,0.2);
+    transition: all 0.25s;
+}
+#refreshMatchButton {
+    text-align: center;
+    font-family: Trebuchet MS;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    font-size: 20px;
+    width: 110px;
+    height: 40px;
+    display: inline-block;
+    color:white;
+    margin-top: 10px;
+    margin-left: 170px;
+    margin-right: 10px;
+    border-radius: 8px;
+    border:none;
+    background-color: rgba(0,0,0,0.2);
+    transition: all 0.25s;
+}
+#joinFakeMatchButton {
+    text-align: center;
+    font-family: Trebuchet MS;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    font-size: 20px;
+    width: 140px;
+    height: 40px;
+    display: inline-block;
+    color:white;
+    margin-top: 10px;
+    margin-left: 290px;
+    margin-right: 10px;
+    border-radius: 8px;
+    border:none;
+    background-color: rgba(0,0,0,0.2);
+    transition: all 0.25s;
+}
+#inMatch-buttons {
+    display: none;
+}
+#readyMatchButton {
+    text-align: center;
+    font-family: Trebuchet MS;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    font-size: 20px;
+    width: 80px;
+    height: 40px;
+    display: inline-block;
+    color:white;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 8px;
+    border:none;
+    background-color: rgba(0,0,0,0.2);
+    transition: all 0.25s;
+}
+#leaveMatchButton {
+    text-align: center;
+    font-family: Trebuchet MS;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    font-size: 20px;
+    width: 80px;
+    height: 40px;
+    display: inline-block;
+    color:white;
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-right: 10px;
+    border-radius: 8px;
+    border:none;
+    background-color: rgba(0,0,0,0.2);
+    transition: all 0.25s;
+}
+#createMatchButton:hover, #refreshMatchButton:hover, #joinFakeMatchButton:hover, #readyMatchButton:hover, #leaveMatchButton:hover {
+    background-color: rgba(0,0,0,0.4);  
+}
+
+/* match creation */
+.matchLabel {
+    display: inline-block;
+    font-size: 15px;
+    width: calc(100vw - 920px);
+    height: 50px;
+    display: inline-block;
+    color:white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.25s;
+}
+#matchSession-inSession {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 0px;
+    display: none;
+}
+#matchSession-inSession--playerBox1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 0px;
+    display: inline-block;
+    font-size: 15px;
+    width: calc(100vw - 1360px);
+    height: 80px;
+    color:white;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.25s;
+}
+#matchSession-inSession--playerBox2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 0px;
+    display: inline-block;
+    font-size: 15px;
+    width: calc(100vw - 1360px);
+    height: 80px;
+    color:white;
+    margin-top: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.25s;
+}
+#matchSession-inSession--playerBox3 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 0px;
+    display: inline-block;
+    font-size: 15px;
+    width: calc(100vw - 1360px);
+    height: 80px;
+    color:white;
+    margin-top: 190px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.25s;
+}
+#matchSession-inSession--playerBox4 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 0px;
+    display: inline-block;
+    font-size: 15px;
+    width: calc(100vw - 1360px);
+    height: 80px;
+    color:white;
+    margin-top: 280px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.25s;
+}
+#matchSession-inSession--mapBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 0px;
+    display: inline-block;
+    font-size: 15px;
+    width: 300px;
+    height: 350px;
+    color:white;
+    margin-top: 10px;
+    margin-left: calc(100vw - 1210px);
+    margin-right: 10px;
+    border-radius: 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.25s;
+}
+#matchSession-inSession--mapBox---icon {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: none;
+    width: 280px;
+    height: 160px;
+    border-radius: 4px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    background-image: url(../img/maps/VespaziumSVG.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.15s;
+}
+#matchSession-inSession--mapBox--selectLeft {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 0px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    color:white;
+    margin-top: 180px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.25s;
+}
+#matchSession-inSession--mapBox--selectLeft---icon {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border: none;
+    width: 20px;
+    height: 20px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    background-image: url(../img/UI/select_left.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.15s;
+}
+#matchSession-inSession--mapBox--selectRight {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 0px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    color:white;
+    margin-top: 180px;
+    margin-left: 260px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.25s;
+}
+#matchSession-inSession--mapBox--selectRight---icon {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border: none;
+    width: 20px;
+    height: 20px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    transform: scaleX(-1);
+    background-image: url(../img/UI/select_left.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.15s;
+}
+#matchSession-inSession--mapBox---nameBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 0px;
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+    color:white;
+    margin-top: 180px;
+    margin-left: 50px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.25s;
+}
+#matchSession-inSession--mapBox---name {
+    font-family: 'CWFont', Fallback, sans-serif;
+    font-size: 17.5px;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    text-indent: 0px;
+    padding: 5px;
+}
+#matchSession-inSession--mapBox---infoBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 0px;
+    text-align: left;
+    display: inline-block;
+    width: 280px;
+    height: 120px;
+    color:white;
+    margin-top: 220px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.25s;
+}
+#matchSession-inSession--mapBox---info {
+    font-family: Trebuchet MS;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    text-indent: 0px;
+    padding: 5px;
+}
+#matchSession-inSession--playerBox1---playerIconBox, #matchSession-inSession--playerBox2---playerIconBox, #matchSession-inSession--playerBox3---playerIconBox, #matchSession-inSession--playerBox4---playerIconBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 0px;
+    text-align: left;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    color:white;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.25s;
+}
+#matchSession-inSession--playerBox1---playerIcon, #matchSession-inSession--playerBox2---playerIcon, #matchSession-inSession--playerBox3---playerIcon, #matchSession-inSession--playerBox4---playerIcon {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    background-image: url(../img/UI/playerIcons/playerIcon_unknown.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.15s;
+}
+#matchSession-inSession--playerBox1---playerCiv, #matchSession-inSession--playerBox2---playerCiv, #matchSession-inSession--playerBox3---playerCiv, #matchSession-inSession--playerBox4---playerCiv {
+    display: inline-block;
+}
+#civSelectOPT {
+    font-size: 15px;
+    font-family: Trebuchet MS;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(0,0,0,0.4);
+    margin-top: 0px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 0px;
+    border: none;
+    width: 150px;
+    height: 30px;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.15s;
+}
+#matchSession-inSession--playerBox1---playerName, #matchSession-inSession--playerBox2---playerName, #matchSession-inSession--playerBox3---playerName, #matchSession-inSession--playerBox4---playerName {
+    font-family: Trebuchet MS;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    text-indent: 0px;
+    margin-left: 0px;
+}
+#matchSession-inSession--playerBox1---playerReady, #matchSession-inSession--playerBox2---playerReady, #matchSession-inSession--playerBox3---playerReady, #matchSession-inSession--playerBox4---playerReady {
+    font-family: Trebuchet MS;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    text-indent: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#matchSession-inSession--playerBox1---mainBox, #matchSession-inSession--playerBox2---mainBox, #matchSession-inSession--playerBox3---mainBox, #matchSession-inSession--playerBox4---mainBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: 90px;
+    margin-top: 25px;
+}
+
+
+
+#nationsBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 0px;
+    display: inline-block;
+    font-size: 15px;
+    width: calc(100vw - 920px);
+    height: 310px;
+    color:white;
+    margin-top: 370px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.25s;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+#nationsBox-englandBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 0px;
+    display: inline-block;
+    font-size: 15px;
+    width: 250px;
+    height: 280px;
+    color:white;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.25s;
+}
+#nationsBox-franceBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 0px;
+    display: inline-block;
+    font-size: 15px;
+    width: 250px;
+    height: 280px;
+    color:white;
+    margin-top: 10px;
+    margin-left: 270px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.25s;
+}
+#nationsBox-spainBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 0px;
+    display: inline-block;
+    font-size: 15px;
+    width: 250px;
+    height: 280px;
+    color:white;
+    margin-top: 10px;
+    margin-left: 530px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.25s;
+}
+#nationsBox-prussiaBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 0px;
+    display: inline-block;
+    font-size: 15px;
+    width: 250px;
+    height: 280px;
+    color:white;
+    margin-top: 10px;
+    margin-left: 790px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.25s;
+}
+#nationsBox-dutchBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 0px;
+    display: inline-block;
+    font-size: 15px;
+    width: 250px;
+    height: 280px;
+    color:white;
+    margin-top: 10px;
+    margin-left: 1050px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.25s;
+}
+#nationsBox-portugalBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 0px;
+    display: inline-block;
+    font-size: 15px;
+    width: 250px;
+    height: 280px;
+    color:white;
+    margin-top: 10px;
+    margin-left: 1310px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.25s;
+}
+#nationsBox-russiaBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 0px;
+    display: inline-block;
+    font-size: 15px;
+    width: 250px;
+    height: 280px;
+    color:white;
+    margin-top: 10px;
+    margin-left: 1570px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.25s;
+}
+#nationsBox-ottomanBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 0px;
+    display: inline-block;
+    font-size: 15px;
+    width: 250px;
+    height: 280px;
+    color:white;
+    margin-top: 10px;
+    margin-left: 1830px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.25s;
+}
+#englandBox-flag {
+    margin-top: 10px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-bottom: 10px;
+    border: none;
+    width: 180px;
+    height: 120px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    background-image: url(../img/UI/flags/englandFlag.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.15s;
+}
+#franceBox-flag {
+    margin-top: 10px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-bottom: 10px;
+    border: none;
+    width: 180px;
+    height: 120px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    background-image: url(../img/UI/flags/franceFlag.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.15s;
+}
+#spainBox-flag {
+    margin-top: 10px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-bottom: 10px;
+    border: none;
+    width: 180px;
+    height: 120px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    background-image: url(../img/UI/flags/spainFlag.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.15s;
+}
+#prussiaBox-flag {
+    margin-top: 10px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-bottom: 10px;
+    border: none;
+    width: 180px;
+    height: 120px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    background-image: url(../img/UI/flags/prussiaFlag.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.15s;
+}
+#dutchBox-flag {
+    margin-top: 10px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-bottom: 10px;
+    border: none;
+    width: 180px;
+    height: 120px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    background-image: url(../img/UI/flags/dutchFlag.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.15s;
+}
+#portugalBox-flag {
+    margin-top: 10px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-bottom: 10px;
+    border: none;
+    width: 180px;
+    height: 120px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    background-image: url(../img/UI/flags/portugalFlag.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.15s;
+}
+#russiaBox-flag {
+    margin-top: 10px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-bottom: 10px;
+    border: none;
+    width: 180px;
+    height: 120px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    background-image: url(../img/UI/flags/russianFlag.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.15s;
+}
+#ottomanBox-flag {
+    margin-top: 10px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-bottom: 10px;
+    border: none;
+    width: 180px;
+    height: 120px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    background-image: url(../img/UI/flags/ottomanFlag.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.15s;
+}
+#englandBox-nameBox, #franceBox-nameBox, #spainBox-nameBox, #prussiaBox-nameBox, #dutchBox-nameBox, #portugalBox-nameBox, #russiaBox-nameBox, #ottomanBox-nameBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 0px;
+    display: inline-block;
+    width: 230px;
+    height: 30px;
+    color:white;
+    margin-top: 140px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.25s;
+}
+#englandBox-name, #franceBox-name, #spainBox-name, #prussiaBox-name, #dutchBox-name, #portugalBox-name, #russiaBox-name, #ottomanBox-name {
+    font-family: 'CWFont', Fallback, sans-serif;
+    font-size: 17.5px;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    text-indent: 0px;
+    padding: 5px;
+}
+#englandBox-infoBox, #franceBox-infoBox, #spainBox-infoBox, #prussiaBox-infoBox, #dutchBox-infoBox, #portugalBox-infoBox, #russiaBox-infoBox, #ottomanBox-infoBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 0px;
+    text-align: left;
+    display: inline-block;
+    width: 230px;
+    height: 90px;
+    color:white;
+    margin-top: 180px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.25s;
+}
+#englandBox-info, #franceBox-info, #spainBox-info, #prussiaBox-info, #dutchBox-info, #portugalBox-info, #russiaBox-info, #ottomanBox-info {
+    font-family: Trebuchet MS;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    text-indent: 0px;
+    padding: 5px;
+}
+#matchSession-inSession--playerBox1---playerCivIMG {
+    margin-top: 10px;
+    margin-left: calc(100vw - 1340px);
+    border: none;
+    width: 120px;
+    height: 80px;
+    border-radius: 4px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    background-image: url(../img/UI/flags/noFlag_lowRes.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.15s;
+}
+#matchSession-inSession--playerBox2---playerCivIMG {
+    margin-top: 10px;
+    margin-left: calc(100vw - 1340px);
+    border: none;
+    width: 120px;
+    height: 80px;
+    border-radius: 4px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    background-image: url(../img/UI/flags/noFlag_lowRes.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.15s;
+}
+#matchSession-inSession--playerBox3---playerCivIMG {
+    margin-top: 10px;
+    margin-left: calc(100vw - 1340px);
+    border: none;
+    width: 120px;
+    height: 80px;
+    border-radius: 4px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    background-image: url(../img/UI/flags/noFlag_lowRes.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.15s;
+}
+#matchSession-inSession--playerBox4---playerCivIMG {
+    margin-top: 10px;
+    margin-left: calc(100vw - 1340px);
+    border: none;
+    width: 120px;
+    height: 80px;
+    border-radius: 4px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    background-image: url(../img/UI/flags/noFlag_lowRes.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.15s;
+}
+#englandBox-flagSelected, #franceBox-flagSelected, #spainBox-flagSelected, #prussiaBox-flagSelected, #dutchBox-flagSelected, #portugalBox-flagSelected, #russiaBox-flagSelected, #ottomanBox-flagSelected {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 0px;
+    display: none;
+    font-size: 15px;
+    width: 180px;
+    height: 120px;
+    color:white;
+    margin-top: 10px;
+    margin-left: 35px;
+    margin-right: 35px;
+    border-radius: 0px;
+    border:none;
+    background-color: rgba(0,0,0,0.7);
+    transition: all 0.25s;
+}
+#englandBox-flagOwner, #franceBox-flagOwner, #spainBox-flagOwner, #prussiaBox-flagOwner, #dutchBox-flagOwner, #portugalBox-flagOwner, #russiaBox-flagOwner, #ottomanBox-flagOwner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Trebuchet MS;
+    font-weight: bold;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-indent: 0px;
+    padding: 0px;
+}
+
+
+#mapPicker {
+    image-rendering: pixelated;
+    user-select: none;
+    font-family: Trebuchet MS;
+    position: absolute;
+    left: calc(100vw / 2);
+    top: calc(100vh / 2);
+    transform: translate(-50%, -50%);
+    height: 290px;
+    width: 400px;
+    /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+    background-image: url(../img/UI/woodTop_brown_ICONPICKER.png);
+    background-size: contain;
+    border-width: 0px;
+    border-color: #d4af37;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    display: none;
+}
+#mapPicker-close {
+    text-align: center;
+    font-family: 'CWFont', Fallback, sans-serif;
+     font-weight: normal;
+     position: absolute;
+     left: 0;
+     top: 0;
+     color: white;
+     border-radius: 4px;
+     border: none;
+     width: 120px;
+     height: 40px;
+     padding: 5px;
+     font-size: 17.5px;
+       margin-top: 230px;
+       margin-bottom: 20px;
+       margin-left: 140px;
+       margin-right: 140px;
+       background:url(../img/UI/mainMenuNormal.png);
+       background-repeat: no-repeat;
+       background-position: center;
+       background-size: 100% 100%;
+       transition: all 0.25s;
+       display: block;
+       background-repeat:no-repeat;
+}
+#mapPicker-close:hover {
+    background:url(../img/UI/mainMenu.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    transition: all 0.25s;
+    display: block;
+    background-repeat:no-repeat;
+}
+#mapPicker-labelBox {
+    font-family: trebuchet MS;
+    text-align: center;
+    font-weight: normal;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    font-size: 15px;
+    text-indent: 5px;
+    width: 360px;
+    height: 40px;
+    color:white;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 4px 4px 4px 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.7);
+    transition: all 0.25s;
+}
+#mapPicker-labelBox--label {
+    font-family: 'CWFont', Fallback, sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    text-indent: 0px;
+    padding: 5px;
+}
+#mapPicker-mapPickerBox {
+    font-family: trebuchet MS;
+    text-align: center;
+    font-weight: normal;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    font-size: 15px;
+    text-indent: 5px;
+    width: 360px;
+    height: 150px;
+    color:white;
+    margin-top: 70px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 4px 4px 4px 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.25s;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+#mapPicker-enetiviaBox {
+    font-family: trebuchet MS;
+    text-align: center;
+    font-weight: normal;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    font-size: 15px;
+    text-indent: 5px;
+    width: 230px;
+    height: 130px;
+    color:white;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 4px 4px 4px 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.25s;
+}
+#mapPicker-enetiviaBox--icon {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    border: none;
+    border-radius: 4px 4px 4px 4px;
+    width: 230px;
+    height: 130px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    background-image: url(../img/maps/EnetiviaSVG.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.15s;
+  }
+  #mapPicker-vespaziumBox {
+    font-family: trebuchet MS;
+    text-align: center;
+    font-weight: normal;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    font-size: 15px;
+    text-indent: 5px;
+    width: 230px;
+    height: 130px;
+    color:white;
+    margin-top: 10px;
+    margin-left: 250px;
+    margin-right: 10px;
+    border-radius: 4px 4px 4px 4px;
+    border:none;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.25s;
+}
+#mapPicker-vespaziumBox--icon {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    border: none;
+    border-radius: 4px 4px 4px 4px;
+    width: 230px;
+    height: 130px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    background-image: url(../img/maps/VespaziumSVG.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.15s;
+  }
+  #mapPicker-enetiviaBox:hover, #mapPicker-vespaziumBox:hover {
+    background-color: rgba(0,0,0,0.7);
+  }

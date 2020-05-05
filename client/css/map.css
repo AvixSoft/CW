@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  background-color: black;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 1080px;
+  transform: translate3d(0,0,0);
+}
+
+.background .water {
+  position: absolute;
+  background-image: url("../img/tex/water.png");
+  background-repeat: repeat;
+  top:0;
+  left:0;
+  height: 100%;
+  width: 100%;
+  filter: url("#turbulence");
+}
+.background .map{
+  position: absolute;
+  background-image: url("../img/maps/VespaziumSVGnoWater.svg");
+  background-repeat: repeat;
+  background-size: contain;
+  top:0;
+  left:0;
+  height: 100%;
+  width: 100%;
+}

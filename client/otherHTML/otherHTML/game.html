@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - CWGUI</title>
+  <link rel="stylesheet" href="../css/gameStyle.css">
+
+</head>
+<style>* {padding: 0; margin: 0}</style>
+<body oncontextmenu="return false;">
+<!-- partial:index.partial.html -->
+<body>
+  <div id="mainX">
+    <div id="mainTitle">COLONIAL</div>
+    <div id="mainSubTitle">WARFARE</div>
+    <button class="fancyButton" id="playGameButton" onmouseover="" onclick="">Skirmish</button><br>
+    <button class="fancyButton" onmouseover="" onclick="">History</button><br>
+    <button class="fancyButton" onmouseover="" onclick="">Settings</button><br>
+    <button class="fancyButton" onmouseover="" onclick="">Discord</button><br>
+    <button class="fullscreenButton" id="fullscreenButton" onclick="">⇲</button><br>
+    <button id="audioManager" class="audioButton" onclick="">🕨</button><br>
+  </div>
+<div id="actualGame">
+<div class="module" id="module">
+  <div id="locationsForEverything">
+    <div id="quebecLocation">
+      <div id="quebecCity">
+        <div id="quebecTab">
+        <div id="quebecName">✯ Quebec</div>
+      </div>
+      </div>
+    </div>
+    <div id="jamestownLocation">
+      <div id="jamestownCity">
+        <div id="jamestownTab">
+        <div id="jamestownName">✯ Jamestown</div>
+      </div>
+      </div>
+    </div>
+    <div id="santoDomingoLocation">
+      <div id="santoDomingoCity">
+        <div id="santoDomingoTab">
+        <div id="santoDomingoName">✯ Santo Domingo</div>
+      </div>
+      </div>
+    </div>
+    <div id="newAmsterdamLocation">
+      <div id="newAmsterdamCity">
+        <div id="newAmsterdamTab">
+        <div id="newAmsterdamName">✯ New Amsterdam</div>
+      </div>
+      </div>
+    </div>
+    <div id="dutchNavy"></div>
+    <div id="spanishNavy"></div>
+    <div id="frenchNavy"></div>
+    <div id="englishNavy"></div>
+    <div id="ns1Location">
+      <div id="ns1City">
+        <div id="ns1Tab">
+        <div id="ns1Name">Pocitawi</div>
+      </div>
+      </div>
+    </div>
+    <div id="ns2Location">
+      <div id="ns2City">
+        <div id="ns2Tab">
+        <div id="ns2Name">Chitzao</div>
+      </div>
+      </div>
+    </div>
+    <div id="ns3Location">
+      <div id="ns3City">
+        <div id="ns3Tab">
+        <div id="ns3Name">Tetlamyn</div>
+      </div>
+      </div>
+    </div>
+    <div id="ns4Location">
+      <div id="ns4City">
+        <div id="ns4Tab">
+        <div id="ns4Name">Zeztitasu</div>
+      </div>
+      </div>
+    </div>
+    <div id="ns5Location">
+      <div id="ns5City">
+        <div id="ns5Tab">
+        <div id="ns5Name">Wactinu</div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fog-img fog-img-first"></div>
+<div class="fog-img fog-img-second"></div>
+<div id="mainSelectionTabs">
+  <button id="" class="britonsChoice" onclick="changeCivBriton()">England</button>
+  <button id="" class="britonsChoice" onclick="changeCivFrance()">France</button>
+  <button id="" class="britonsChoice" onclick="changeCivHolland()">Netherlands</button>
+  <button id="" class="britonsChoice" onclick="changeCivSpain()">Spain</button>
+</div>
+<div id="nationMenuInfo">
+  <div id="nationFlag"></div>
+  <div id="civInfo">Click on civilization to see information about it</div>
+</div>
+<div id="rulerTab">
+  <div id="rulerIcon"></div>
+  <div id="rulerInfo">Click on civilization to see information about your nation's ruler.</div>
+</div>
+<div id="tabs">
+<div id="statsTab">
+  <div id="rulerName"></div>
+  <div id="currentWealth"></div>
+  <div id="currentIncome"></div>
+  <div id="armyPop"></div>
+</div>
+<div id="historyTab">
+  <div id="currentYear"></div>
+  <div id="currentAge"></div>
+  <div id="turnCount"></div>
+</div>
+<div id="ageTab">
+  <div id="ageIcon"></div>
+  <div id="ageName">Age of Exploration</div>
+  <div id="ageYears">(1492 - 1623)</div>
+  <div id="ageInfo">The so-called Age of Exploration was a period during which European ships were traveled around the world to search for new trading routes and partners to feed burgeoning capitalism in Europe.</div>
+    <button id="closeButtonJS" class="closeButton">Continue</button>
+</div>
+      <div id="endTurnTab">
+          <!-- <button id="deployTroopsButton" class="testButton">Recruit</button> -->
+          <button id="endTurnButton" class="testButton">End Turn</button>
+      </div>
+
+      <div id="mapToolsTab">
+        <button id="zoomInMapButton" class="toolMapButton">+</button>
+        <button id="zoomOutMapButton" class="toolMapButton">-</button>
+        <button id="hideMovesButton" class="toolMapButton">&#8599</button>
+        <button id="fullscreenMapButton" class="toolMapButton">⇲</button>
+    </div>
+    <div id="iconTab">
+      <div id="rulerIconForTab"> </div>
+    </div>
+    <div id="mapMoveTab">
+      <button id="moveUpButton" class="toolMapButton">&#8593</button>
+      <button id="moveDownButton" class="toolMapButton">&#8595</button>
+      <button id="moveLeftButton" class="toolMapButton">&#8592</button>
+      <button id="moveRightButton" class="toolMapButton">&#8594</button>
+  </div>
+</div>
+</div>
+<div id="loadingScreen">
+<div id="topWoodLoad"></div>
+<div id="bottomWoodLoad"></div>
+</div>
+</body>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.5/pixi.min.js'></script>
+  <script  src="../js/mainGame.js"></script>
+  <script  src="../js/wheel-zoom.js"></script>
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+</body>
+</html>

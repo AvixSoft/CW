@@ -1,0 +1,1084 @@
+#militaryUnitsTab {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+    background-image: url(../img/woodBG2.png);
+    background-size: contain;
+    display: none;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    height:100px;
+  }
+  #unitInfoTab {
+    text-align: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+    background-color: rgba(0, 0, 0, 0.7);
+    background-size: contain;
+    font-size: 15px;
+    display: inline-block;
+    border: none;
+    border-radius: 4px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    width: 90px;
+    height: 90px;
+  }
+  #unitInfo {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0px;
+    color: white;
+    margin-bottom: 20px;
+    transition: 0.5s;
+    font-size: 12px;
+  padding: 5px;
+  }
+  /* MUSKETMEN */
+#unitMusketmen {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: contain;
+    display: inline-block;
+    border: none;
+    border-radius: 4px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    width: 40px;
+    height: 40px;
+  }
+  #unitMusketmen:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  #unitMusketmenIcon {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border: none;
+    width: 30px;
+    height: 30px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    background-image: url(../img/soldierAnimSheet/idle/newPose.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.15s;
+  }
+  #unitMusketmenIcon:hover {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    width: 40px;
+    height: 40px;
+    transition: all 0.15s;
+  }
+
+  /* CANNON */
+  #unitNavy {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: contain;
+    display: inline-block;
+    border: none;
+    border-radius: 4px;
+    margin-left: 50px;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    width: 40px;
+    height: 40px;
+  }
+  #unitNavy:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  #unitNavyIcon {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border: none;
+    width: 30px;
+    height: 30px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    background-image: url(../img/commonAnimSheet/units/frigates/frigate1.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.25s;
+  }
+  #unitNavyIcon:hover {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    width: 40px;
+    height: 40px;
+    transition: all 0.15s;
+  }
+  #unitDefender {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: contain;
+    display: inline-block;
+    border: none;
+    border-radius: 4px;
+    margin-left: 95px;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    width: 40px;
+    height: 40px;
+  }
+  #unitDefender:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  #unitDefenderIcon {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border: none;
+    width: 30px;
+    height: 30px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    background-image: url(../img/commonAnimSheet/units/musk/musk.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.25s;
+  }
+  #unitDefenderIcon:hover {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    width: 40px;
+    height: 40px;
+    transition: all 0.15s;
+  }
+  #frenchArmy {
+    position: absolute;
+    image-rendering: crisp-edges;
+    border: none;
+    left: 0px;
+    top: 0px;
+    width: 75px;
+    height: 75px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    background-image: url(../img/commonAnimSheet/units/musk/muskAnim_fire.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transform: scale(1.5);
+    transition: all 5s;
+  }
+  #frenchArmy:hover {
+    animation: selectAnim 5s infinite;
+  }
+  #englishArmy {
+    position: absolute;
+    image-rendering: crisp-edges;
+    border: none;
+    left: 0px;
+    top: 0px;
+    width: 75px;
+    height: 75px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    background-image: url(../img/commonAnimSheet/units/musk/muskAnim_idle.gif);    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transform: scale(1.5);
+    transition: all 5s;
+  }
+  #englishArmy:hover {
+    animation: selectAnim 5s infinite;
+  }
+  #spanishArmy {
+    position: absolute;
+    image-rendering: crisp-edges;
+    border: none;
+    left: 0px;
+    top: 0px;
+    width: 75px;
+    height: 75px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    background-image: url(../img/commonAnimSheet/units/musk/muskAnim_idle.gif);    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transform: scale(1.5);
+    transition: all 5s;
+  }
+  #spanishArmy:hover {
+    animation: selectAnim 5s infinite;
+  }
+  #dutchArmy {
+    position: absolute;
+    image-rendering: crisp-edges;
+    border: none;
+    left: 0px;
+    top: 0px;
+    width: 75px;
+    height: 75px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    background-image: url(../img/commonAnimSheet/units/musk/muskAnim_idle.gif);    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transform: scale(1.5);
+    transition: all 5s;
+  }
+  #dutchArmy:hover {
+    animation: selectAnim 5s infinite;
+  }
+  #selectNavyButton {
+    user-select: none;
+    font-family: Trebuchet MS;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+    /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: contain;
+    border-radius: 8px;
+    border-width: 4px;
+    border-color: #d4af37;
+    margin-bottom: 15px;
+    margin-left: 190px;
+    display: inline-block;
+  }
+  #selectNavyButton:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  #navyIcon {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border: none;
+    width: 20px;
+    height: 20px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    background-image: url(../img/navyIcon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.15s;
+  }
+  #selectArmyButton {
+    user-select: none;
+    font-family: Trebuchet MS;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+    /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: contain;
+    border-radius: 8px;
+    border-width: 4px;
+    border-color: #d4af37;
+    margin-bottom: 15px;
+    margin-left: 225px;
+    display: inline-block;
+  }
+  #selectArmyButton:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  #muskIcon {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border: none;
+    width: 20px;
+    height: 20px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    background-image: url(../img/muskIcon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.15s;
+  }
+  #selectCapitalButton {
+    user-select: none;
+    font-family: Trebuchet MS;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+    /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: contain;
+    border-radius: 8px;
+    border-width: 4px;
+    border-color: #d4af37;
+    margin-bottom: 15px;
+    margin-left: 155px;
+    display: inline-block;
+  }
+  #selectCapitalButton:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  #capitalIcon {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border: none;
+    width: 20px;
+    height: 20px;
+    /* border-radius: 20px;
+    border: none; */
+    overflow: hidden;
+    background-image: url(../img/capitalIcon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.15s;
+  }
+  #frenchNavy {
+    -moz-image-rendering: crisp-edges;
+    image-rendering: crisp-edges;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    background-image: url(../img/commonAnimSheet/units/frigates/frigate.png);
+    /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 700px;
+    top: 775px;
+    width: 651px;
+    height: 468px;
+    transform: scale(0.175, 0.175);
+    background-position: center;
+    margin: 0 auto;
+    transition: 0.5s ease;
+    animation: shipMoveFrench 20s infinite;
+  }
+  #frenchNavy:hover {
+    animation: selectAnim 5s infinite;
+  }
+  #englishNavy {
+    -moz-image-rendering: crisp-edges;
+    image-rendering: crisp-edges;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    background-image: url(../img/commonAnimSheet/units/frigates/frigate.png);
+    /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 1725px;
+    top: 375px;
+    width: 651px;
+    height: 468px;
+    transform: scale(0.175, 0.175);
+    background-position: center;
+    margin: 0 auto;
+    transition: 0.5s ease;
+    animation: shipMoveEnglish 15s infinite;
+  }
+  #englishNavy:hover {
+    animation: selectAnim 5s infinite;
+  }
+  #spanishNavy {
+    -moz-image-rendering: crisp-edges;
+    image-rendering: crisp-edges;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    background-image: url(../img/commonAnimSheet/units/frigates/frigate.png);
+    /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 365px;
+    top: 400px;
+    width: 651px;
+    height: 468px;
+    transform: scale(-0.175, 0.175);
+    background-position: center;
+    margin: 0 auto;
+    transition: 0.5s ease;
+    animation: shipMoveSpanish 25s infinite;
+  }
+  #spanishNavy:hover {
+    animation: selectAnim 5s infinite;
+  }
+  #dutchNavy {
+    -moz-image-rendering: crisp-edges;
+    image-rendering: crisp-edges;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    background-image: url(../img/commonAnimSheet/units/frigates/frigate.png);
+    /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 800px;
+    top: 150px;
+    width: 651px;
+    height: 468px;
+    transform: scale(0.175, 0.175);
+    background-position: center;
+    margin: 0 auto;
+    transition: 0.5s ease;
+    animation: shipMoveDutch 10s infinite;
+  }
+  #dutchNavy:hover {
+    animation: selectAnim 5s infinite;
+  }
+
+  #travelHeader {
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+    background-image: url(../img/UI/metalHeader.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    margin-right: 140px;
+    margin-top: 12.5px;
+    width: 210px;
+    height: 30px;
+  }
+  #cityTravelList {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+    background-image: url(../img/woodBG2.png);
+    background-size: contain;
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px;
+    margin-bottom: 60px;
+    width: 180px;
+    height: 150px;
+    float: left;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: none;
+  }
+  #travelOptions {
+    overflow: hidden;
+  }
+  #quebecTravelButton {
+    text-align: center;
+    user-select: none;
+    font-family: Trebuchet MS;
+    width: 130px;
+    height: 30px;
+    /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 4px;
+    border-width: 4px;
+    border-color: #d4af37;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  #jamestownTravelButton {
+    text-align: center;
+    user-select: none;
+    font-family: Trebuchet MS;
+    width: 130px;
+    height: 30px;
+    /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 4px;
+    border-width: 4px;
+    border-color: #d4af37;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-top: 50px;
+    margin-right: 10px;
+  }
+  #santoDomingoTravelButton {
+    text-align: center;
+    user-select: none;
+    font-family: Trebuchet MS;
+    width: 130px;
+    height: 30px;
+    /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 4px;
+    border-width: 4px;
+    border-color: #d4af37;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-top: 90px;
+    margin-right: 10px;
+  }
+  #newAmsterdamTravelButton {
+    text-align: center;
+    user-select: none;
+    font-family: Trebuchet MS;
+    width: 130px;
+    height: 30px;
+    /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 4px;
+    border-width: 4px;
+    border-color: #d4af37;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-top: 130px;
+    margin-right: 10px;
+  }
+  #ns1TravelButton {
+    text-align: center;
+    user-select: none;
+    font-family: Trebuchet MS;
+    width: 130px;
+    height: 30px;
+    /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 4px;
+    border-width: 4px;
+    border-color: #d4af37;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-top: 170px;
+    margin-right: 10px;
+  }
+  #ns2TravelButton {
+    text-align: center;
+    user-select: none;
+    font-family: Trebuchet MS;
+    width: 130px;
+    height: 30px;
+    /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 4px;
+    border-width: 4px;
+    border-color: #d4af37;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-top: 210px;
+    margin-right: 10px;
+  }
+  #ns3TravelButton {
+    text-align: center;
+    user-select: none;
+    font-family: Trebuchet MS;
+    width: 130px;
+    height: 30px;
+    /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 4px;
+    border-width: 4px;
+    border-color: #d4af37;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-top: 250px;
+    margin-right: 10px;
+  }
+  #ns4TravelButton {
+    text-align: center;
+    user-select: none;
+    font-family: Trebuchet MS;
+    width: 130px;
+    height: 30px;
+    /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 4px;
+    border-width: 4px;
+    border-color: #d4af37;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-top: 290px;
+    margin-right: 10px;
+  }
+  #ns5TravelButton {
+    text-align: center;
+    user-select: none;
+    font-family: Trebuchet MS;
+    width: 130px;
+    height: 30px;
+    /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 4px;
+    border-width: 4px;
+    border-color: #d4af37;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-top: 330px;
+    margin-right: 10px;
+  }
+  #ns6TravelButton {
+    text-align: center;
+    user-select: none;
+    font-family: Trebuchet MS;
+    width: 130px;
+    height: 30px;
+    /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 4px;
+    border-width: 4px;
+    border-color: #d4af37;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-top: 370px;
+    margin-right: 10px;
+  }
+  #quebecFlag {
+    display: inline-block;
+    image-rendering: pixelated;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    background-image: url(../img/commonAnimSheet/units/logos/french/frenchUnitLogo32.png);
+    /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 12.5px;
+    margin-right: 5px;
+  }
+  #jamestownFlag {
+    display: inline-block;
+    image-rendering: pixelated;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    background-image: url(../img/commonAnimSheet/units/logos/england/englishUnitLogo32.png);
+    /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 52.5px;
+    margin-right: 5px;
+  }
+  #santoDomingoFlag {
+    display: inline-block;
+    image-rendering: pixelated;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    background-image: url(../img/commonAnimSheet/units/logos/spain/spanishUnitLogo32.png);
+    /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 92.5px;
+    margin-right: 5px;
+  }
+  #newAmsterdamFlag {
+    display: inline-block;
+    image-rendering: pixelated;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    background-image: url(../img/commonAnimSheet/units/logos/dutch/dutchUnitLogo32.png);
+    /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 132.5px;
+    margin-right: 5px;
+  }
+  #ns1Flag {
+    display: inline-block;
+    image-rendering: pixelated;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    background-image: url(../img/commonAnimSheet/units/logos/natives/nativeUnitLogo32.png);
+    /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 172.5px;
+    margin-right: 5px;
+  }
+  #ns2Flag {
+    display: inline-block;
+    image-rendering: pixelated;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    background-image: url(../img/commonAnimSheet/units/logos/natives/nativeUnitLogo32.png);
+    /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 212.5px;
+    margin-right: 5px;
+  }
+  #ns3Flag {
+    display: inline-block;
+    image-rendering: pixelated;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    background-image: url(../img/commonAnimSheet/units/logos/natives/nativeUnitLogo32.png);
+    /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 252.5px;
+    margin-right: 5px;
+  }
+  #ns4Flag {
+    display: inline-block;
+    image-rendering: pixelated;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    background-image: url(../img/commonAnimSheet/units/logos/natives/nativeUnitLogo32.png);
+    /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 292.5px;
+    margin-right: 5px;
+  }
+  #ns5Flag {
+    display: inline-block;
+    image-rendering: pixelated;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    background-image: url(../img/commonAnimSheet/units/logos/natives/nativeUnitLogo32.png);
+    /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 332.5px;
+    margin-right: 5px;
+  }
+  #ns6Flag {
+    display: inline-block;
+    image-rendering: pixelated;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    background-image: url(../img/commonAnimSheet/units/logos/natives/nativeUnitLogo32.png);
+    /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 372.5px;
+    margin-right: 5px;
+  }
+  #quebecTravelName {
+    font-weight: bold;
+    color: white;
+    padding: 5px;
+  }
+  #jamestownTravelName {
+    font-weight: bold;
+    color: white;
+    padding: 5px;
+  }
+  #santoDomingoTravelName {
+    font-weight: bold;
+    color: white;
+    padding: 5px;
+  }
+  #newAmsterdamTravelName {
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+    padding: 5px;
+  }
+  #ns1TravelName {
+    font-weight: bold;
+    color: white;
+    padding: 5px;
+  }
+  #ns2TravelName {
+    font-weight: bold;
+    color: white;
+    padding: 5px;
+  }
+  #ns3TravelName {
+    font-weight: bold;
+    color: white;
+    padding: 5px;
+  }
+  #ns4TravelName {
+    font-weight: bold;
+    color: white;
+    padding: 5px;
+  }
+  #ns5TravelName {
+    font-weight: bold;
+    color: white;
+    padding: 5px;
+  }
+  #ns6TravelName {
+    font-weight: bold;
+    color: white;
+    padding: 5px;
+  }
+  #quebecTravelButton:hover, #jamestownTravelButton:hover, #santoDomingoTravelButton:hover, #newAmsterdamTravelButton:hover, #ns1TravelButton:hover, #ns2TravelButton:hover, #ns3TravelButton:hover, #ns4TravelButton:hover, #ns5TravelButton:hover, #ns6TravelButton:hover, #travelRefresh:hover, #travelClose:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  #travelRefresh {
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+    font-family: Trebuchet MS;
+    width: 75px;
+    height: 20px;
+    /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 4px;
+    border-width: 4px;
+    border-color: #d4af37;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 410px;
+    margin-right: 10px;
+  }
+  #travelClose {
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+    font-family: Trebuchet MS;
+    width: 75px;
+    height: 20px;
+    /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 4px;
+    border-width: 4px;
+    border-color: #d4af37;
+    margin-bottom: 10px;
+    margin-left: 95px;
+    margin-top: 410px;
+    margin-right: 10px;
+  }
+  #newsTab {
+    user-select: none;
+    font-family: Trebuchet MS;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: contain;
+    border-radius: 8px;
+    border-width: 4px;
+    border-color: #d4af37;
+    margin-bottom: 15px;
+    margin-left: 260px;
+    display: inline-block;
+  }
+  #newsInfo {
+    font-weight: bold;
+    color: turquoise;
+    padding: 5px;
+  }
+
+  @keyframes newsAnim {
+    0% {
+      color: rgba(42, 195, 255, 1)
+    } 10% {
+      color: rgba(42, 195, 255, 0)
+    } 20% {
+      color: rgba(42, 195, 255, 1)
+    } 30% {
+      color: rgba(42, 195, 255, 0)
+    } 40% {
+      color: rgba(42, 195, 255, 1)
+    } 50% {
+      color: rgba(42, 195, 255, 0)
+    } 60% {
+      color: rgba(42, 195, 255, 1)
+    } 70% {
+      color: rgba(42, 195, 255, 0)
+    } 80% {
+      color: rgba(42, 195, 255, 1)
+    } 90% {
+      color: rgba(42, 195, 255, 0)
+    } 100% {
+      color: rgba(42, 195, 255, 1)
+    }
+  }
+  @keyframes newsNoAnim{
+    0% {
+      color: rgba(42, 195, 255, 1)
+    } 100% {
+      color: rgba(42, 195, 255, 1)  
+    }
+  }
+  @keyframes selectAnim {
+    0% {
+      opacity: 100%;
+    } 10% {
+      opacity: 50%;
+    } 20% {
+      opacity: 100%;
+    } 30% {
+      opacity: 50%;
+    } 40% {
+      opacity: 100%;
+    } 50% {
+      opacity: 50%;
+    } 60% {
+      opacity: 100%;
+    } 70% {
+      opacity: 50%;
+    } 80% {
+      opacity: 100%;
+    } 90% {
+      opacity: 50%;
+    } 100% {
+      opacity: 100%;
+    }
+  }

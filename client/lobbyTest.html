@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Colonial Warfare</title>
+  <link rel="stylesheet" type="text/css" href="/client/css/lobby.css">
+  <link rel="stylesheet" type="text/css" href="/client/css/session.css">
+  <link rel="stylesheet" type="text/css" href="/client/css/gameLoad.css">
+  <link rel="icon" href="/client/img/mainIcon.png">
+
+</head>
+<style>* {padding: 0; margin: 0}</style>
+<body oncontextmenu="return false;">
+
+<body>
+    <div id="centerBG"></div>
+    <div id="fogBG"></div>
+    <div id="login">
+        <div id="loginScreen">
+            <div id="loginScreen-label">Colonial Warfare</div>
+            <div id="loginScreen-usernameBar">
+                <div id="loginScreen-usernameBar--text">Unsername</div>
+                <input id="loginScreen-usernameBar--input" type="text"></input>
+            </div><br>
+            <div id="loginScreen-passwordBar">
+                <div id="loginScreen-passwordBar--text">Password</div>
+                <input id="loginScreen-passwordBar--input" type="password"></input>
+            </div>
+            <div id="loginScreen-MSG">&#9888 Log in or sign up to play</div>
+            <div id="loginScreen-buttons">
+                <button id="loginScreen-buttons--logIn">Log In</button>
+                <button id="loginScreen-buttons--signUp">Sign Up</button>
+            </div>
+        </div>
+        <div id="studioLogo"></div>
+    </div>
+    <div id="lobbyScreen">
+        <div id="lobbyScreen-menu">
+            <div id="lobbyScreen-menu--titleBox">
+                <div id="lobbyScreen-menu--title">Colonial Warfare</div>
+            </div>
+            <div id="lobbyScreen-menu--infoBox">
+                <div id="lobbyScreen-menu--info">Info on options will appear here.</div>
+            </div>
+            <button id="lobbyScreen-menu--campaign">Campain</button>
+            <button id="lobbyScreen-menu--findMatch">Find Match</button>
+            <button id="lobbyScreen-menu--tournaments">Tournaments</button>
+            <button id="lobbyScreen-menu--alliances">Alliances</button>
+        </div>
+        
+        <div id="lobbyScreen-box">
+            <button id="lobbyScreen-box--news">News</button>
+            <button id="lobbyScreen-box--updates">Updates</button>
+            <button id="lobbyScreen-box--homeCity">Home City</button>
+            <button id="lobbyScreen-box--match">Match</button>
+            <div id="lobbyScreen-box--mainBox">
+                <div id="homeCityPage">
+                    <div id="homeMap"></div>
+                </div>
+                <div id="matchSession-lobby">
+                    <div id="find-and-create-matchButtons">
+                        <button id="createMatchButton">Create Match</button>
+                        <button id="refreshMatchButton">Refresh</button>
+                    </div>
+                    <div id="inMatch-buttons">
+                        <button id="readyMatchButton">Ready</button>
+                        <button id="leaveMatchButton">Leave</button>
+                    </div>
+                    <div id="matchSession-lobbyBox">
+                        <div id="actaulSessions">
+                            <!-- sessions go in here -->
+                        </div>
+                        <div id="matchSession-inSession">
+                            <div id="matchSession-inSession--playerBox1">
+                                <div id="matchSession-inSession--playerBox1---playerIconBox">
+                                    <div id="matchSession-inSession--playerBox1---playerIcon"></div>
+                                </div>
+                                <div id="matchSession-inSession--playerBox1---mainBox">
+                                    <div id="matchSession-inSession--playerBox1---playerName">Host</div>
+                                <div id="matchSession-inSession--playerBox1---playerReady">Not Ready</div>
+                                </div>
+                            </div>
+                            <div id="matchSession-inSession--playerBox1---playerCivIMG"></div>
+                            <div id="matchSession-inSession--playerBox2">
+                                <div id="matchSession-inSession--playerBox2---playerIconBox">
+                                    <div id="matchSession-inSession--playerBox2---playerIcon"></div>
+                                </div>
+                                <div id="matchSession-inSession--playerBox2---mainBox">
+                                    <div id="matchSession-inSession--playerBox2---playerName">Username</div>
+                                <div id="matchSession-inSession--playerBox2---playerReady">Not Ready</div>
+                                </div>
+                            </div>
+                            <div id="matchSession-inSession--playerBox2---playerCivIMG"></div>
+                            <div id="matchSession-inSession--playerBox3">
+                                <div id="matchSession-inSession--playerBox3---playerIconBox">
+                                    <div id="matchSession-inSession--playerBox3---playerIcon"></div>
+                                </div>
+                                <div id="matchSession-inSession--playerBox3---mainBox">
+                                    <div id="matchSession-inSession--playerBox3---playerName">Username</div>
+                                <div id="matchSession-inSession--playerBox3---playerReady">Not Ready</div>
+                                </div>
+                            </div>
+                            <div id="matchSession-inSession--playerBox3---playerCivIMG"></div>
+                            <div id="matchSession-inSession--playerBox4">
+                                <div id="matchSession-inSession--playerBox4---playerIconBox">
+                                    <div id="matchSession-inSession--playerBox4---playerIcon"></div>
+                                </div>
+                                <div id="matchSession-inSession--playerBox4---mainBox">
+                                    <div id="matchSession-inSession--playerBox4---playerName">Username</div>
+                                <div id="matchSession-inSession--playerBox4---playerReady">Not Ready</div>
+                                </div>
+                            </div>
+                            <div id="matchSession-inSession--playerBox4---playerCivIMG"></div>
+                            <div id="matchSession-inSession--mapBox">
+                                <div id="matchSession-inSession--mapBox---icon"></div>
+                                <div id="matchSession-inSession--mapBox--selectLeft">
+                                    <div id="matchSession-inSession--mapBox--selectLeft---icon"></div>
+                                </div>
+                                <div id="matchSession-inSession--mapBox--selectRight">
+                                    <div id="matchSession-inSession--mapBox--selectRight---icon"></div>
+                                </div>
+                                <div id="matchSession-inSession--mapBox---nameBox">
+                                    <div id="matchSession-inSession--mapBox---name">Vespazium</div>
+                                </div>
+                                <div id="matchSession-inSession--mapBox---infoBox">
+                                    <div id="matchSession-inSession--mapBox---info">Here will be your map info.</div>
+                                </div>
+                            </div>
+                            <div id="nationsBox">
+                                <div id="nationsBox-englandBox">
+                                    <div id="englandBox-flag">
+                                        <div id="englandBox-flagSelected">
+                                            <div id="englandBox-flagOwner"></div>
+                                        </div>
+                                    </div>
+                                    <div id="englandBox-nameBox">
+                                        <div id="englandBox-name">England</div>
+                                    </div>
+                                    <div id="englandBox-infoBox">
+                                        <div id="englandBox-info"><div style="color: white;">With a huge army and navy, you're always short on funds due to constant wars you fight oversea to keep your empire.</div></div>
+                                    </div>
+                                </div>
+                                <div id="nationsBox-franceBox">
+                                    <div id="franceBox-flag">
+                                        <div id="franceBox-flagSelected">
+                                            <div id="franceBox-flagOwner"></div>
+                                        </div>
+                                    </div>
+                                    <div id="franceBox-nameBox">
+                                        <div id="franceBox-name">France</div>
+                                    </div>
+                                    <div id="franceBox-infoBox">
+                                        <div id="franceBox-info"><div style="color: white;">You with the most balanced military and economy, should still beware of uprisings that will taint  diplomacy.</div></div>
+                                    </div>
+                                </div>
+                                <div id="nationsBox-spainBox">
+                                    <div id="spainBox-flag">
+                                        <div id="spainBox-flagSelected">
+                                            <div id="spainBox-flagOwner"></div>
+                                        </div>
+                                    </div>
+                                    <div id="spainBox-nameBox">
+                                        <div id="spainBox-name">Spain</div>
+                                    </div>
+                                    <div id="spainBox-infoBox">
+                                        <div id="spainBox-info"><div style="color: white;">You have the best explorers in the world with massive gold reserves, but your shipments to colonies are slow.</div></div>
+                                    </div>
+                                </div>
+                                <div id="nationsBox-prussiaBox">
+                                    <div id="prussiaBox-flag">
+                                        <div id="prussiaBox-flagSelected">
+                                            <div id="prussiaBox-flagOwner"></div>
+                                        </div>
+                                    </div>
+                                    <div id="prussiaBox-nameBox">
+                                        <div id="prussiaBox-name">Prussia</div>
+                                    </div>
+                                    <div id="prussiaBox-infoBox">
+                                        <div id="prussiaBox-info"><div style="color: white;">Prussians are the best trained and most experienced soldiers in in the world, but you have little gold.</div></div>
+                                    </div>
+                                </div>
+                                <div id="nationsBox-dutchBox">
+                                    <div id="dutchBox-flag">
+                                        <div id="dutchBox-flagSelected">
+                                            <div id="dutchBox-flagOwner"></div>
+                                        </div>
+                                    </div>
+                                    <div id="dutchBox-nameBox">
+                                        <div id="dutchBox-name">The Netherlands</div>
+                                    </div>
+                                    <div id="dutchBox-infoBox">
+                                        <div id="dutchBox-info"><div style="color: white;">Since you have the best economy through trade, all nations envy you. It's too bad you have a small army.</div></div>
+                                    </div>
+                                </div>
+                                <div id="nationsBox-portugalBox">
+                                    <div id="portugalBox-flag">
+                                        <div id="portugalBox-flagSelected">
+                                            <div id="portugalBox-flagOwner"></div>
+                                        </div>
+                                    </div>
+                                    <div id="portugalBox-nameBox">
+                                        <div id="portugalBox-name">Portugal</div>
+                                    </div>
+                                    <div id="portugalBox-infoBox">
+                                        <div id="portugalBox-info"><div style="color: white;">Well, it good to know that you are the most balanced nation, but your research is slow.</div></div>
+                                    </div>
+                                </div>
+                                <div id="nationsBox-russiaBox">
+                                    <div id="russiaBox-flag">
+                                        <div id="russiaBox-flagSelected">
+                                            <div id="russiaBox-flagOwner"></div>
+                                        </div>
+                                    </div>
+                                    <div id="russiaBox-nameBox">
+                                        <div id="russiaBox-name">Russia</div>
+                                    </div>
+                                    <div id="russiaBox-infoBox">
+                                        <div id="russiaBox-info"><div style="color: white;">Damn, you have a massive army for cheap costs, but your mens' morale is always low. Communism later...</div></div>
+                                    </div>
+                                </div>
+                                <div id="nationsBox-ottomanBox">
+                                    <div id="ottomanBox-flag">
+                                        <div id="ottomanBox-flagSelected">
+                                            <div id="ottomanBox-flagOwner"></div>
+                                        </div>
+                                    </div>
+                                    <div id="ottomanBox-nameBox">
+                                        <div id="ottomanBox-name">Ottoman Empire</div>
+                                    </div>
+                                    <div id="ottomanBox-infoBox">
+                                        <div id="ottomanBox-info"><div style="color: white;">With a world class army able to fight anywhere, your troops are very expensive. At least you have an income.</div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sessionStatus-box">
+                        <div id="sessionStatus-info">&#9888 No match in progress. Find a match or create one.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="lobbyScreen-playerBox">
+            <div id="lobbyScreen-playerBox--playerInfo">
+                <div id="lobbyScreen-playerBox--playerInfo---name">Username</div>
+            </div>
+            <div id="lobbyScreen-playerBox--playerIcon">
+                <div id="lobbyScreen-playerBox--playerIcon---icon"></div>
+            </div>
+            <div id="lobbyScreen-playerBox--playerIconInfoBox">
+                <div id="lobbyScreen-playerBox--playerIconInfoBox---info"><div style="color:grey">The Squire</div>Just beginning his career as a tactition, he doesn't know all the moves but knows he will get there.</div>
+            </div>
+            <div id="lobbyScreen-settings">
+                <div id="lobbyScreen-settings--icon"></div>
+            </div>
+        </div>
+        <div id="chat">
+            <div id="chat-box">
+                <div id="WELCOMEMSG-CHAT"><div style="font-weight: bold; display: inline-block;">[server]</div> Welcome to Colonial Warfare! This is the global chatroom where you can talk to other players who are currently online. No spam please.</div>
+            </div>
+            <form id="chat-form">
+                <input id="chat-input" type="text"></input> 
+                <div id="chat-input--send">
+                    <div id="chat-input--send---icon"></div>
+                </div>
+            </form>
+        </div>
+        <div id="iconPicker">
+            <div id="iconPicker-labelBox">
+                <div id="iconPicker-labelBox--label">Tactician's Crest</div>
+            </div>
+            <div id="iconPicker-iconPickerBox">
+                <div id="iconPicker-iconBox1">
+                    <div id="iconPicker-iconBox1--icon"></div>
+                </div>
+                <div id="iconPicker-iconBox2">
+                    <div id="iconPicker-iconBox2--icon"></div>
+                </div>
+                <div id="iconPicker-iconBox3">
+                    <div id="iconPicker-iconBox3--icon"></div>
+                </div>
+            </div>
+            <button id="iconPicker-close">Close</button>
+        </div>
+        <div id="mapPicker">
+            <div id="mapPicker-labelBox">
+                <div id="mapPicker-labelBox--label">Maps</div>
+            </div>
+            <div id="mapPicker-mapPickerBox">
+                <div id="mapPicker-enetiviaBox">
+                    <div id="mapPicker-enetiviaBox--icon"></div>
+                </div>
+                <div id="mapPicker-vespaziumBox">
+                    <div id="mapPicker-vespaziumBox--icon"></div>
+                </div>
+            </div>
+            <button id="mapPicker-close">Close</button>
+        </div>
+    </div>
+    <div id="game-loadingScreen">
+        <div id="game-loadingScreen--nationBox">
+            <div id="game-loadingScreen--nationBox---leftIMGBox">
+                <div id="game-loadingScreen--nationBox---leftIMG"></div>
+            </div>
+            <div id="game-loadingScreen--nationBox---infoBox">
+                <div id="game-loadingScreen--nationBox---infoBox----nationName"></div>
+                <div id="game-loadingScreen--nationBox---infoBox----nationInfo"></div>
+            </div>
+        </div>
+        <div id="game-loadingScreen--loadingBox">
+            <div id="game-loadingScreen--loadingBox---loadingBar"></div>
+        </div>
+    </div>
+</body>
+<script  src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.js"></script>
+<script  src="/client/js/sound.js"></script>
+<script  src="/client/js/maps.js"></script>
+<script  src="/client/js/lobby.js"></script>
+

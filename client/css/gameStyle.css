@@ -1,0 +1,2242 @@
+*{
+  font-family: Trebuchet MS;
+    transition: all 0.5s;
+    
+  
+}
+#preload-01 { background: url(../img/UI/mainMenuNormal.png) no-repeat -9999px -9999px; }
+#preload-02 { background: url(../img/UI/mainMenu.png) no-repeat -9999px -9999px; }
+#preload-03 { background: url(../img/earth.jpg) no-repeat -9999px -9999px; }
+#preload-04 { background: url(https://github.com/AvixSoft/CW/blob/master./img/boomerBG.jpg?raw=true) no-repeat -9999px -9999px; }
+@font-face {
+  font-family: 'CWFont';
+  src: url(../fonts/RingbearerMedium-w173.ttf) format('truetype');
+}
+#locationsForEverything {
+  visibility: hidden;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.0); 
+  border-radius: 4px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+#tabs {
+  visibility: hidden;
+}
+@keyframes fadeX {
+  0% {
+    opacity: 100%;
+  } 100% {
+    opacity: 0%;
+  }
+}
+body {
+  color: white;
+  background: black;
+    overflow: hidden;
+  text-align: center;
+}
+#currentYear {
+    margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 5spx;
+}
+
+#currentWealth {
+  display: inline-block;
+     margin-top: 2px;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-weight: normal;
+  color: yellow;
+}
+#currentWealth:hover {
+  font-weight: bold;
+  color: yellow;
+}
+#armyPop {
+  display: inline-block;
+     margin-top: 2px;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  color: white;
+}
+
+#armyLabel {
+  margin-top: 20vh;
+  background-color: rgba(0,0,0,0.7);
+  border-radius: 4px;
+  display: inline-block;
+}
+
+#deployTroops {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  color: white;
+  padding: 5px;
+}
+#turnCount {
+    margin-top: 5px;
+  margin-right: 10px;
+  margin-left: 10px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#endTurn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 135px;
+  margin-bottom: 15px;
+  color: white;
+  font-weight: normal;
+  padding: 5px;
+}
+#endTurn:hover {
+  color: white;
+  font-weight: bold;
+}
+#deployTroops:hover {
+  color: white;
+  font-weight: bold;
+}
+#module {
+  width: 2700px;
+  height: 1800px;
+  image-rendering: crisp-edges;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  /* top: -75%;
+  left: -50%; */
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-image: url(../img/earth.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: none;
+  visibility: hidden;
+  transform: scale(1);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  /* isometric map */
+  /* transform: rotate(-45deg) skew(15deg, 15deg); */
+} 
+@keyframes moveX {
+  from { left: 0; } to { left: 400px; }
+}
+@keyframes moveY {
+  from { top: 0; } to { top: 200px; }
+}
+/* @keyframes invis {
+  visibility: hidden;
+} */
+
+.testButton {
+  text-align: center;
+  font-size: 20px;
+  border: none;
+  border-radius: 4px;
+    font-weight: normal;
+  color: white;
+  border-radius: 4px;
+  border: none;
+    width: 130px;
+  height: 30px;
+ background-color: rgba(0, 0, 0, 0.4);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    transition: 0.25s;
+background-repeat:no-repeat;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  margin-left: 5px
+}
+.testButton:hover {
+  font-weight: bold;
+  text-align: center;
+  width: 130px;
+  height: 30px;
+ background-color: rgba(0, 0, 0, 0.7);
+
+}
+#currentAge {
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+    font-weight: bold;
+  color: grey;
+}
+
+@keyframes fadeTest {
+  0% {
+    opacity: 0%
+  } 100% {
+    opacity: 100%
+  }
+}
+#currentIncome {
+  display: inline-block;
+    margin-top: 2px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  color: yellow;
+}
+
+
+#buttonTab {
+  user-select: none;
+  font-family: Trebuchet MS;
+  position: absolute;
+    display: inline-block;
+  left: 0;
+  bottom: 0;
+  width: 10vw;
+  height: 10vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+  border-color: #d4af37;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+#endTurnTab {
+  user-select: none;
+  font-family: Trebuchet MS;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 140px;
+  /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+  background-image: url(../img/woodBG2.png);
+  background-size: contain;
+  border-radius: 8px;
+  border-width: 4px;
+  border-color: #d4af37;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.buttons {
+  text-align: center;
+}
+@keyframes fadeOut {
+  0% { 
+opacity: 100%;
+  } 100% {
+opacity: 0%;
+  }
+}
+@keyframes fadeIn {
+  0% { 
+opacity: 0%;
+  } 100% {
+opacity: 100%;
+  }
+}
+#ageTab {
+  text-align: center;
+  /* background-color: rgba(0,0,0,0.7); */
+  background-image: url(../img/ageTabBG.png);
+  background-size: cover;
+  display: inline-block;
+  border-color: bisque;
+  border-width: 20px;
+  border-radius: 12px;
+  margin-right: 10px;
+  margin-top: 10px;
+position: fixed;
+    top: 50%;
+    left: 50%;
+  width: 35vw;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s;
+  animation: fadeIn 0.5s forwards;
+}
+#ageName {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+  text-align: center;
+  font-size: 5vh;
+  font-weight: bold;
+}
+#ageYears {
+  margin-bottom: 10px;
+  color: white;
+  text-align: center;
+  font-size: 3vh;
+  font-weight: bold;
+}
+#ageInfoTab {
+  border: none;
+  font-size: 20px;
+  border-radius: 4px;
+    font-weight: bold;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  display: inline-block;
+  background-color: rgba(0,0,0,0.4);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.25s;
+background-repeat:no-repeat;
+  margin-top: 0px;
+  margin-bottom: 10px
+}
+#ageInfo {
+  padding: 7.5px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+  text-align: center;
+  font-size: 3vh;
+  font-weight: bold;
+}
+#moreInfoButton {
+  display: inline-block;
+  border: none;
+  font-size: 20px;
+  border-radius: 4px;
+    font-weight: bold;
+  color: white;
+  border-radius: 4px;
+  border: none;
+    width: 100px;
+  height: 40px;
+  background-color: rgba(0,0,0,0.4);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.25s;
+background-repeat:no-repeat;
+  margin-top: 0px;
+  margin-bottom: 10px
+}
+.closeButton {
+  display: inline-block;
+  border: none;
+  font-size: 20px;
+  border-radius: 4px;
+    font-weight: bold;
+  color: white;
+  border-radius: 4px;
+  border: none;
+    width: 100px;
+  height: 40px;
+  background-color: rgba(0,0,0,0.4);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.25s;
+background-repeat:no-repeat;
+  margin-top: 0px;
+  margin-bottom: 10px
+}
+.closeButton:hover, #moreInfoButton:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+#ageIcon {
+  /* image-rendering: pixelated; */
+    display:block;
+    margin:auto;
+  margin-top: 10px;
+   width: 10vw;
+   height: 10vh;
+  border: visiblefill;
+   border-color: white;
+   border-width: 20px;
+   overflow: hidden;
+   background-image: url(../img/temple.jpg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+   transition: all 0.5s;
+}
+#quebecLocation {
+  image-rendering: pixelated;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-image: url(../img/commonAnimSheet/flags/french/frenchColony1.gif);
+  /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 850px;
+  top: 1150px;
+  width: 256px;
+  height: 256px;
+  transform: scale(1);
+  background-position: center;
+  margin: 0 auto;
+  transition: 0.5s ease;
+
+}
+#quebecLocation:hover {
+  animation: selectAnim 5s infinite;
+}
+
+#quebecTab {
+  text-align:center;
+    user-select: none;
+  font-family: Trebuchet MS;
+  position: absolute;
+  margin-top: 160px;
+  margin-left: -40px;
+  display:inline-block;
+  width: 82px;
+  background-color: rgba(13, 20, 132, 0.7);
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+#quebecName {
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  margin-top: 0px;
+  color: white;
+  transition: 0.5s;
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+#quebecDock {
+  image-rendering: pixelated;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-image: url(../img/buildings/dockTopView.png);
+  /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 905px;
+  top: 1000px;
+  width: 128px;
+  height: 128px;
+  background-position: center;
+  margin: 0 auto;
+  transition: 0.5s ease;
+  transform: rotate(175deg) scale(0.5);
+}
+
+#jamestownLocation {
+  image-rendering: pixelated;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-image: url(../img/buildings/colony1.png);
+  /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 2125px;
+  top: 475px;
+  width: 256px;
+  height: 256px;
+  transform: scale(1);
+  background-position: center;
+  margin: 0 auto;
+  transition: 0.5s ease;
+  
+}
+#jamestownLocation:hover {
+  animation: selectAnim 5s infinite;
+}
+#jamestownTab {
+  text-align:center;
+    user-select: none;
+  font-family: Trebuchet MS;
+  position: absolute;
+  margin-top: 160px;
+  margin-left: -55px;
+  display:inline-block;
+  width: 110px;
+  background-color: rgba(255, 2, 2, 0.7);
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+#jamestownName {
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  margin-top: 0px;
+  color: white;
+  transition: 0.5s;
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+#jamestownDock {
+  image-rendering: pixelated;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-image: url(../img/buildings/dockTopView.png);
+  /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 2025px;
+  top: 525px;
+  width: 128px;
+  height: 128px;
+  background-position: center;
+  margin: 0 auto;
+  transition: 0.5s ease;
+  transform: rotate(-35deg) scale(0.5);
+}
+
+#santoDomingoLocation {
+  image-rendering: pixelated;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-image: url(../img/commonAnimSheet/flags/spain/spanishColony1.gif);
+  /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 350px;
+  top: 550px;
+  width: 256px;
+  height: 256px;
+  transform: scale(1);
+  background-position: center;
+  margin: 0 auto;
+  transition: 0.5s ease;
+
+}
+#santoDomingoLocation:hover {
+  animation: selectAnim 5s infinite;
+}
+#santoDomingoTab {
+  text-align:center;
+    user-select: none;
+  font-family: Trebuchet MS;
+  position: absolute;
+  margin-top: 160px;
+  margin-left: -65px;
+  display:inline-block;
+  width: 130px;
+  background-color:rgba(255, 251, 0, 0.849);
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+#santoDomingoName {
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  margin-top: 0px;
+  color: white;
+  transition: 0.5s;
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+#santoDomingoDock {
+  image-rendering: pixelated;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-image: url(../img/buildings/dockTopView.png);
+  /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 550px;
+  top: 575px;
+  width: 128px;
+  height: 128px;
+  background-position: center;
+  margin: 0 auto;
+  transition: 0.5s ease;
+  transform: rotate(245deg) scale(0.5);
+}
+#newAmsterdamLocation {
+  image-rendering: pixelated;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-image: url(../img/commonAnimSheet/flags/dutch/dutchColony1.gif);
+  /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 1025px;
+  top: 300px;
+  width: 256px;
+  height: 256px;
+  transform: scale(1);
+  background-position: center;
+  margin: 0 auto;
+  transition: 0.5s ease;
+
+}
+#newAmsterdamLocation:hover {
+  animation: selectAnim 5s infinite;
+}
+#newAmsterdamTab {
+  text-align:center;
+    user-select: none;
+  font-family: Trebuchet MS;
+  position: absolute;
+  margin-top: 160px;
+  margin-left: -65px;
+  display:inline-block;
+  width: 140px;
+  background-color:rgba(42, 187, 23, 0.849);
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+#newAmsterdamName {
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  margin-top: 0px;
+  color: white;
+  transition: 0.5s;
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+#jamestownDock {
+  image-rendering: pixelated;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-image: url(../img/buildings/dockTopView.png);
+  /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 2025px;
+  top: 525px;
+  width: 128px;
+  height: 128px;
+  background-position: center;
+  margin: 0 auto;
+  transition: 0.5s ease;
+  transform: rotate(-35deg) scale(0.5);
+}
+#ns1Location {
+  image-rendering: crisp-edges;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-image: url(../img/buildings/nativeSettlement_thatch_s.png);
+  /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 2300px;
+  top: 950px;
+  width: 256px;
+  height: 256px;
+  transform: scale(1);
+  background-position: center;
+  margin: 0 auto;
+  transition: 0.5s ease;
+}
+#ns1Location:hover {
+  animation: selectAnim 5s infinite;
+}
+#ns1Tab {
+  text-align:center;
+    user-select: none;
+  font-family: Trebuchet MS;
+  position: absolute;
+  margin-top: 160px;
+  margin-left: -35px;
+  display:inline-block;
+  width: 70px;
+  background-color: rgba(87, 67, 2, 0.89);
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+#ns1Name {
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  margin-top: 0px;
+  color: white;
+  transition: 0.5s;
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+#ns2Location {
+  image-rendering: crisp-edges;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-image: url(../img/buildings/nativeSettlement_thatch_s.png);
+  /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 1625px;
+  top: 1325px;
+  width: 256px;
+  height: 256px;
+  background-position: center;
+  margin: 0 auto;
+  transition: 0.5s ease;
+}
+#ns2Location:hover {
+  animation: selectAnim 5s infinite;
+}
+#ns2Tab {
+  text-align:center;
+    user-select: none;
+  font-family: Trebuchet MS;
+  position: absolute;
+  margin-top: 160px;
+  margin-left: -35px;
+  display:inline-block;
+  width: 70px;
+  background-color: rgba(87, 67, 2, 0.89);
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+#ns2Name {
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  margin-top: 0px;
+  color: white;
+  transition: 0.5s;
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+#ns3Location {
+  image-rendering: crisp-edges;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-image: url(../img/buildings/nativeSettlement_thatch_s.png);  
+  /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 1100px;
+  top: 1375px;
+  width: 256px;
+  height: 256px;
+  background-position: center;
+  margin: 0 auto;
+  transition: 0.5s ease;
+}
+#ns3Location:hover {
+  animation: selectAnim 5s infinite;
+}
+#ns3Tab {
+  text-align:center;
+  user-select: none;
+  font-family: Trebuchet MS;
+  position: absolute;
+  margin-top: 160px;
+  margin-left: -35px;
+  display:inline-block;
+  width: 70px;
+  background-color: rgba(87, 67, 2, 0.89);
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+#ns3Name {
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  margin-top: 0px;
+  color: white;
+  transition: 0.5s;
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+#ns4Location {
+  image-rendering: crisp-edges;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-image: url(../img/buildings/nativeSettlement_thatch_s.png);
+  /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 1875px;
+  top: 1550px;
+  width: 256px;
+  height: 256px;
+  background-position: center;
+  margin: 0 auto;
+  transition: 0.5s ease; 
+}
+#ns4Location:hover {
+  animation: selectAnim 5s infinite;
+}
+#ns4Tab {
+  text-align:center;
+    user-select: none;
+  font-family: Trebuchet MS;
+  position: absolute;
+  margin-top: 160px;
+  margin-left: -35px;
+  display:inline-block;
+  width: 70px;
+  background-color: rgba(87, 67, 2, 0.89);
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+#ns4Name {
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  margin-top: 0px;
+  color: white;
+  transition: 0.5s;
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+#ns5Location {
+  image-rendering: crisp-edges;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-image: url(../img/buildings/nativeSettlement_thatch_s.png);
+  /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 450px;
+  top: 1275px;
+  width: 256px;
+  height: 256px;
+  background-position: center;
+  margin: 0 auto;
+  transition: 0.5s ease;
+}
+#ns5Location:hover {
+  animation: selectAnim 5s infinite;
+}
+#ns5Tab {
+  text-align:center;
+    user-select: none;
+  font-family: Trebuchet MS;
+  position: absolute;
+  margin-top: 160px;
+  margin-left: -35px;
+  display:inline-block;
+  width: 70px;
+  background-color: rgba(87, 67, 2, 0.89);
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+#ns5Name {
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  margin-top: 0px;
+  color: white;
+  transition: 0.5s;
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+#ns6Location {
+  image-rendering: crisp-edges;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-image: url(../img/buildings/nativeSettlement_thatch_s.png);
+  /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 525px;
+  top: 300px;
+  width: 256px;
+  height: 256px;
+  background-position: center;
+  margin: 0 auto;
+  transition: 0.5s ease;
+}
+#ns6Location:hover {
+  animation: selectAnim 5s infinite;
+}
+#ns6Tab {
+  text-align:center;
+    user-select: none;
+  font-family: Trebuchet MS;
+  position: absolute;
+  margin-top: 160px;
+  margin-left: -40px;
+  display:inline-block;
+  width: 80px;
+  background-color: rgba(87, 67, 2, 0.89);
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+#ns6Name {
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  margin-top: 0px;
+  color: white;
+  transition: 0.5s;
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+
+.toolMapButton {
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 25px;
+  border: none;
+  border-radius: 4px;
+    font-weight: normal;
+  color: white;
+  border-radius: 4px;
+  border: none;
+    width: 30px;
+  height: 30px;
+background-color: rgba(0, 0, 0, 0.0);
+    transition: all 0.25s;
+background-repeat:no-repeat;
+  margin-top: 10px;
+  margin-bottom: 10px
+}
+.toolMapButton:hover {
+font-weight: bold;
+background-color: rgba(0, 0, 0, 0.9);
+}
+#iconTab {
+  user-select: none;
+  font-family: Trebuchet MS;
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+  background-image: url(../img/woodBG2.png);
+  background-size: contain;
+  border-radius: 60px 60px 60px 60px;
+  border-width: 4px;
+  margin-top: 10px;
+  margin-left: 10px;
+  display: inline-block;
+}
+#rulerIconForTab {
+  margin: 10px;
+   width: 80px;
+   height: 80px;
+   /* border-radius: 20px;
+   border: none; */
+   overflow: hidden;
+   background-image: url(../img/flagFranceIcon.png);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+   transition: all 0.5s;
+}
+/* #rulerIconForTab:hover {
+  background-image: url(../img/rulerFranceIcon.png);
+} */
+#rulerName {
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 50px;
+  font-weight: bold;
+}
+#mapToolsTab {
+  user-select: none;
+  font-family: Trebuchet MS;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50px;
+  /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+  background-image: url(../img/woodBG2.png);
+  background-size: contain;
+  border-radius: 8px;
+  border-width: 4px;
+  border-color: #d4af37;
+  margin-top: 95px;
+  margin-left: 35px;
+  display: inline-block;
+}
+#statsTab {
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+  background-image: url(../img/woodBG2.png);
+  background-size: contain;
+  font-size: 15px;
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  margin-left: 60px;
+  margin-top: 10px;
+}
+#historyTab {
+  position: absolute;
+  right: 0;
+  top: 0;
+  /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+  background-image: url(../img/woodBG2.png);
+  background-size: contain;
+  font-size: 15px;
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.fog-img-first {
+  pointer-events: none;
+  height: 250vh;
+  width: 100000px;
+  background: url(../img/fog-1.png) repeat-x;
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
+  animation: marquee 60s linear infinite;
+  margin-top: -100vh;
+  opacity: 3;
+}
+
+.fog-img-second {
+  pointer-events: none;
+  background: url(../img/fog-2.png);
+  background-repeat: repeat-x;
+  background-size: contain;
+  background-position: center;
+  animation: marquee 30s linear infinite;
+  margin-top: -200vh;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-200vw, 0, 0);
+  }
+}
+@keyframes fadeMain {
+  0% {
+    opacity: 100%;
+  } 100% {
+    opacity: 0%;
+  }
+}
+
+#testArmy {
+  image-rendering: pixelated;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-image: url(../img/soldierAnimSheet/idle/newPose.gif);
+  /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+  background-repeat: no-repeat;
+  background-size: 11vh;
+  background-position: center;
+  transform-origin: 53.9% -151.5%;
+  transform: scale(12);
+  margin: 0 auto;
+  transition: 0.5s ease;
+}
+#mapMoveTab {
+  user-select: none;
+  font-family: Trebuchet MS;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 215px;
+  /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%); */
+  background-image: url(../img/woodBG2.png);
+  background-size: contain;
+  border-radius: 8px;
+  border-width: 4px;
+  border-color: #d4af37;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  /* display: inline-block; */
+  display:none;
+}
+
+
+
+#civInfo {
+  font-weight: bold;
+  margin-top: 0px;
+  color: white;
+  margin-bottom: 20px;
+  transition: 0.5s;
+  font-size: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#settingsVar{
+  margin-right: -160px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+#nationMenuInfo {
+  text-align:center;
+    user-select: none;
+  font-family: Trebuchet MS;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display:inline-block;
+  width: 215px;
+  /* background: rgba(0,0,0,0.7); */
+  background-image: url(../img/woodBG2.png);
+  background-size: contain;
+  border-radius: 8px;
+  margin-top: 30px;
+  margin-right: 30px;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+#rulerTab {
+  text-align:center;
+    user-select: none;
+  font-family: Trebuchet MS;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display:inline-block;
+  width: 170px;
+  /* background: rgba(0,0,0,0.7); */
+  background-image: url(../img/woodBG2.png);
+  background-size: contain;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  margin-right: 30px;
+  visibility: hidden;
+  transition: 0.5s;
+}
+#rulerInfo {
+  font-weight: bold;
+  margin-top: 0px;
+  color: white;
+  margin-bottom: 20px;
+  transition: 0.5s;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#rulerIcon {
+  margin-top: 20px;
+  margin-left: 10px;
+   margin-right: 10px;
+   margin-bottom: 10px;
+   width: 150px;
+   height: 20vh;
+   /* border-radius: 20px;
+   border: none; */
+   overflow: hidden;
+   background-image: url(../img/unknownRuler.png);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+   transition: all 0.5s;
+}
+
+#englandPick {
+  margin-bottom: 10px;
+  width: 130px;
+}
+
+#nationName {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: Trebuchet MS;
+  font-size: 3vh;
+  font-weight: bold;
+}
+
+#homeButtons {
+    position: absolute;
+  top: 0;
+  right: 0;
+    display:inline-block;
+    width: 150px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+    margin-top: 7.5vh;
+  margin-right: 7.5vw;
+  visibility: hidden;
+}
+
+#mapForEverything {
+  image-rendering: crisp-edges;
+  text-align: center;
+  color: white;
+  animation: fadeInMenu 2.5s linear;
+  overflow: hidden;
+  background-image: url(../img/europa.jpg);
+  /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+  background-repeat: no-repeat;
+  background-size: 60vh;
+  height: 100vh;
+  background-position: center;
+  transform-origin: 50% 50%;
+  margin: 0 auto;
+  margin-top: -50px;
+ margin-left: -10px;
+  margin-right: -10px;
+  margin-bottom: -0px;
+  transition: 0.5s ease;
+  visibility: hidden;
+  
+}
+
+#loadingMan {
+  image-rendering: pixelated;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif);
+  /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+  background-repeat: no-repeat;
+  background-size: 60vh;
+  height: 100vh;
+  background-position: center;
+  transform-origin: 50% 50%;
+  margin: 0 auto;
+  margin-top: -50px;
+ margin-left: -10px;
+  margin-right: -10px;
+  margin-bottom: -0px;
+  transition: 0.5s ease;
+  visibility: visible;
+  
+}
+
+
+#nationFlag {
+  margin-top: 10px;
+  margin-left: 10px;
+   margin-right: 10px;
+   margin-bottom: 10px;
+   width: 195px;
+   height: 100px;
+   /* border-radius: 20px;
+   border: none; */
+   overflow: hidden;
+   background-image: url(../img/noFlag.jpg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+   transition: all 0.5s;
+}
+
+
+@keyframes zoomHomeNationENG {
+    0% {
+    background-image: url(https://raw.githubusercontent.com/AvixSoft/CW/master/img/englandPoliticalMarked.png);
+    opacity: 100%;    
+  } 25% {
+    opacity: 0%;
+    transform: scale(12);
+  } 50% {
+    transform-origin: 20% 40%;
+    opacity: 0%;
+  } 100% {
+     opacity: 100%;
+    background-image: url(https://raw.githubusercontent.com/AvixSoft/CW/master/img/london.png);
+    -webkit-transform-origin: 50% 50%;
+    transform: scale(1);
+/*     transform: rotate3d(1, 2, -1, 70deg); */
+    background-size: 100% 100%;
+    background-position: center;
+  }
+}
+@keyframes changeNationAndChooseFinalENG{
+  0% {
+    opacity: 100%;    
+  } 25% {
+    opacity: 0%;
+    transform: scale(12);
+  } 50% {
+    transform-origin: 20% 40%;
+    opacity: 0%;
+  }100% {
+    opacity: 100%;
+    background-image: url(https://raw.githubusercontent.com/AvixSoft/CW/master/img/englandPoliticalMarked.png);
+    -webkit-transform-origin: 50% 50%;
+    transform: scale(1);
+/*     transform: rotate3d(1, 2, -1, 70deg); */
+    background-size: 60vh;
+    background-position: center;
+
+  }
+}
+@keyframes changeENG{
+  0% {
+
+  } 50% {
+    transform: scale(2);
+    transform-origin: 50% 50%;
+  }100% {
+    transform-origin: 42.5% 45%;
+    transform: scale(14);
+  }
+}
+@keyframes changeNationAndChooseFinalSPN{
+  0% {
+    opacity: 100%;    
+  } 25% {
+    opacity: 0%;
+    transform: scale(12);
+  } 50% {
+    transform-origin: 10% 70%;
+    opacity: 0%;
+  } 100% {
+    opacity: 100%;
+    background-image: url(https://raw.githubusercontent.com/AvixSoft/CW/master/img/spainPolitical.png);
+    -webkit-transform-origin: 50% 50%;
+    transform: scale(1);
+/*     transform: rotate3d(1, 2, -1, 70deg); */
+    background-size: 80vh;
+    background-position: center;
+  }
+}
+
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+
+.gameTitle {
+  right: 0;
+  top: 0;
+}
+
+.notif {
+  user-select: none;
+  font-family: Trebuchet MS;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 150px;
+  width: 215px;
+  background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(1,1,4,1) 46%, rgba(70,72,73,1) 100%);
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-right: 0px;
+  visibility: visible;
+}
+
+.notifInfo {
+  font-weight: bold;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.notifTitle {
+  color: white;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-bottom: 0px;
+}
+
+#mainSelectionTabs {
+  user-select: none;
+  font-family: Trebuchet MS;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 150px;
+  /* background: radial-gradient(circle, rgba(0,0,0,0.0) 0%, rgba(1,1,4,0.0) 46%, rgba(70,72,73,0.0) 100%); */
+  background-image: url(../img/woodBG2.png);
+  background-size: contain;
+  border-radius: 8px;
+  border-width: 4px;
+  border-color: #d4af37;
+  margin-top: 30px;
+  margin-left: 30px;
+  display: block;
+}
+.objectivesTitle {
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  margin-top:10px;
+  margin-bottom: 0px;
+}
+.objectivesSubTitle {
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-decoration: overline;
+}
+
+.closeNotif {
+  margin-left: 95px;
+  font-size: 20px;
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.7);
+background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+      border: none;
+  outline: none;
+}
+@keyframes goAwayNotif {
+  0% {
+    opacity: 100%;
+  } 100% {
+    opacity: 0;
+  }
+}
+@keyframes comeInNotif {
+  0% {
+    opacity: 0
+  } 100% {
+    opacity: 100% 
+  }
+}
+
+.britonsSelect {
+  margin-left: 150px;
+  margin-top: 220px;
+  width: 200px;
+  height: 200px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+}
+.franksSelect {
+  display: block;
+  margin-left: 230px;
+  margin-top: -50px;
+  width: 200px;
+  height: 200px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+}
+.italiansSelect {
+  display: block;
+  margin-left: 400px;
+  margin-top: -10px;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+.buttons {
+  text-align: center;
+}
+.britonsChoice {
+  text-align: center;
+  font-size: 20px;
+  border: none;
+  border-radius: 4px;
+    font-weight: normal;
+  color: white;
+  border-radius: 4px;
+  border: none;
+    width: 130px;
+  height: 30px;
+ background-color: rgba(0, 0, 0, 0.4);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    transition: 0.25s;
+background-repeat:no-repeat;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  margin-left: 5px
+}
+.britonsChoice:hover {
+ font-weight: bold;
+ background-color: rgba(0, 0, 0, 0.7); 
+}
+
+button {
+  border: none;
+  border-radius: 4px;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  font-weight: normal;
+  width: 40px;
+  height: 30px;
+  margin-top: 10px;
+  margin: 2px;
+  margin-bottom: -20px;
+}
+button:hover {
+  background: rgba(0,0,0,0.7);
+  font-weight: bold;
+}
+
+.franksMap{
+  text-align: center;
+}
+#britonMapIMG{ 
+      position: absolute;
+    left:0;
+    top:0;
+  visibility: hidden;
+  margin-top: 10vh;
+  margin-left: 10vw;
+  width: 40vw;
+  height: 80vh;
+  border-radius: 16px
+}
+
+.click{
+    
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border:2px solid #15f3d5cc;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1 !important;
+    visibility: hidden;
+   -webkit-pointer-events:none;
+    pointer-events:none;
+
+}
+
+
+
+@keyframes click{
+    0%{
+        transform: scale(1);
+        opacity: 1;
+        filter: blur(1px)
+    }
+    50%{
+        transform: scale(2);
+        opacity: 0.2;
+        filter: blur(1px)
+    }
+  
+  
+    100%{
+        transform: scale(1);
+        opacity: 1;
+        filter: blur(1px)
+    }
+}
+
+
+/* .container {
+  overflow: hidden;
+  border-radius: 12px;
+  margin-top: 20px;
+  margin-left: 8vw;
+  margin-right: 8vw;
+}
+
+.sliding-background {
+  background: url("https://raw.githubusercontent.com/AvixSoft/CW/master/img/bgCW.jpg") repeat-x;
+  height: 60vh;
+  width: 5076px;
+  animation: slide 100s linear infinite;
+https://cdnb.artstation.com/p/assets/images/images/003/520/261/large/joeri-lefevre-castelum-siege-web3.jpg?1474590169 
+} */
+
+@keyframes slide{
+  0%{
+    transform: translate3d(0, 0, 0);
+  }
+  50%{
+    transform: translate3d(-2092px, 0, 0);
+  }
+    100%{
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes zoom{
+  0% {
+    transform-origin: 50% 50%;
+      transform: scale(0.5);
+  }100% {
+    transform-origin: 50% 50%;
+     transform: scale(2);
+  }
+}
+
+
+
+@keyframes fallInOne {
+  0% { 
+    font-size: 0vh;
+  } 100% {
+    font-size: 12vh;
+  }
+}
+@keyframes fallInButtons {
+  0% { 
+opacity: 0%;
+  } 25% {
+opacity: 0%;
+  }100% {
+opacity: 100%;
+  }
+}
+
+@keyframes fadeInGame {
+  0%{
+    opacity: 0%;
+  } 25% {
+    opacity: 0%;
+  } 75% {
+    opacity: 0%;
+  } 100%{
+    opacity: 100%;
+  }
+}
+
+@font-face {
+  font-family: 'CWFont';
+  src: url(../fonts/RingbearerMedium-w173.ttf) format('truetype');
+}
+
+#mainTitle {
+  font-family: 'CWFont', Fallback, sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 0vh;
+  text-align: center;
+  margin-top: 6vh;
+  margin-bottom: 0px;
+  animation: fallInOne 1s forwards;
+}
+#mainSubTitle {
+  font-family: 'CWFont', Fallback, sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 12vh;
+  text-align: center;
+  margin-top: -2vh;
+  margin-bottom: 0px;
+  /* text-decoration: overline; */
+  animation: fallInOne 1.5s forwards;
+}
+
+
+.fancyButton {
+ text-align: center;
+ font-family: 'CWFont', Fallback, sans-serif;
+  font-weight: normal;
+  color: white;
+  border-radius: 4px;
+  border: none;
+    width: 17vw;
+  height: 8vh;
+  padding: 2vh;
+  font-size: 4vh;
+    margin-top: 3vh;
+    background:url(../img/UI/mainMenuNormal.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    transition: all 0.25s;
+background-repeat:no-repeat;
+animation: fallInButtons 5s forwards;
+}
+.fancyButton:hover {
+  text-align: center;
+  font-family: 'CWFont', Fallback, sans-serif;
+   font-weight: normal;
+   color: white;
+   border-radius: 4px;
+   border: none;
+     width: 18vw;
+   height: 8vh;
+   padding: 2vh;
+   font-size: 4vh;
+     margin-top: 3vh;
+     background:url(../img/UI/mainMenu.png);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: 100% 100%;
+     transition: all 0.25s;
+ background-repeat:no-repeat;
+ 
+ }
+ .fullscreenButton {
+  text-align: center;
+  font-family: 'CWFont', Fallback, sans-serif;
+   font-weight: normal;
+   color: white;
+   border-radius: 4px;
+   border: none;
+     width: 4vw;
+   height: 8vh;
+   padding: 1vh;
+   font-size: 4vh;
+     margin-top: 3vh;
+     background:url(../img/UI/mainMenuNormal.png);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: 100% 100%;
+     transition: all 0.25s;
+ background-repeat:no-repeat;
+ position: absolute;
+ right: 0;
+ bottom: 0;
+ margin-bottom: 30px;
+ margin-right: 70px;
+ }
+
+ .fullscreenButton:hover {
+
+  text-align: center;
+  font-family: 'CWFont', Fallback, sans-serif;
+   font-weight: normal;
+   color: white;
+   border-radius: 4px;
+   border: none;
+     width: 4vw;
+   height: 8vh;
+   padding: 1vh;
+   font-size: 4vh;
+     margin-top: 3vh;
+     background:url(../img/UI/mainMenu.png);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: 100% 100%;
+     transition: all 0.25s;
+ background-repeat:no-repeat;
+ 
+ }
+
+ .audioButton {
+  text-align: center;
+  font-family: 'CWFont', Fallback, sans-serif;
+   font-weight: normal;
+   color: white;
+   border-radius: 4px;
+   border: none;
+     width: 4vw;
+   height: 8vh;
+   padding: 1vh;
+   font-size: 4vh;
+     margin-top: 3vh;
+     background:url(../img/UI/mainMenuNormal.png);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: 100% 100%;
+     transition: all 0.25s;
+ background-repeat:no-repeat;
+ position: absolute;
+ left: 0;
+ bottom: 0;
+ margin-bottom: 30px;
+ margin-left: 70px;
+ }
+ .audioButton:hover {
+  text-align: center;
+  font-family: 'CWFont', Fallback, sans-serif;
+   font-weight: normal;
+   color: white;
+   border-radius: 4px;
+   border: none;
+     width: 4vw;
+   height: 8vh;
+   padding: 1vh;
+   font-size: 4vh;
+     margin-top: 3vh;
+     background:url(../img/UI/mainMenu.png);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: 100% 100%;
+     transition: all 0.25s;
+ background-repeat:no-repeat;
+ position: absolute;
+ left: 0;
+ bottom: 0;
+ margin-bottom: 30px;
+ margin-left: 70px;
+ }
+ #topWoodLoad {
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-image: url(../img/woodLoad5.jpg);
+  /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0px;
+  top: -100vh;
+  width: 100vw;
+  height: 100vh;
+  transform: scale(1,1);
+  background-position: center;
+  margin: 0 auto;
+  transition: 0.5s ease;
+}
+#bottomWoodLoad {
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-image: url(../img/woodLoad4.jpg);
+  /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0px;
+  bottom: -100vh;
+  width: 100vw;
+  height: 100vh;
+  transform: scale(1,1);
+  background-position: center;
+  margin: 0 auto;
+  transition: 0.5s ease;
+}
+@keyframes topLoadComeDown {
+  0% {
+    top: -100vh;
+  } 25% {
+    top: -50vh;
+  } 75% {
+    top: -50vh;
+  } 100% {
+    top: -100vh;
+  }
+}
+@keyframes bottomLoadComeUp {
+  0% {
+    bottom: -100vh;
+  } 25% {
+    bottom: -50vh;
+  } 75% {
+    bottom: -50vh;
+  } 100% {
+    bottom: -100vh;
+  }
+}
+@keyframes topLoadComeDown2 {
+  0% {
+    top: -100vh;
+  } 25% {
+    top: -50vh;
+  } 75% {
+    top: -50vh;
+  } 100% {
+    top: -100vh;
+  }
+}
+@keyframes bottomLoadComeUp2 {
+  0% {
+    bottom: -100vh;
+  } 25% {
+    bottom: -50vh;
+  } 75% {
+    bottom: -50vh;
+  } 100% {
+    bottom: -100vh;
+  }
+}
+
+#mainSelectionTabs {
+  visibility: hidden;
+}
+
+#londonEuropeLocation {
+  image-rendering: pixelated;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-image: url(../img/commonAnimSheet/flags/england/englishColony4.gif);
+  /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 600px;
+  top: 675px;
+  width: 110px;
+  height: 175px;
+  transform: scale(0.75);
+  background-position: center;
+  margin: 0 auto;
+  transition: 0.5s ease;
+  
+}
+#londonEuropeTab {
+  text-align:center;
+    user-select: none;
+  font-family: Trebuchet MS;
+  position: absolute;
+  margin-top: 150px;
+  margin-left: -40px;
+  display:inline-block;
+  width: 80px;
+  background-color: rgba(255, 2, 2, 0.7);
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+#londonEuropeName {
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  margin-top: 0px;
+  color: white;
+  transition: 0.5s;
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+#edinburghEuropeLocation {
+  image-rendering: pixelated;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-image: url(../img/commonAnimSheet/flags/england/englishColony3.gif);
+  /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 575px;
+  top: 475px;
+  width: 110px;
+  height: 175px;
+  transform: scale(0.75);
+  background-position: center;
+  margin: 0 auto;
+  transition: 0.5s ease;
+  
+}
+#edinburghEuropeTab {
+  text-align:center;
+    user-select: none;
+  font-family: Trebuchet MS;
+  position: absolute;
+  margin-top: 150px;
+  margin-left: -45px;
+  display:inline-block;
+  width: 90px;
+  background-color: rgba(255, 2, 2, 0.7);
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+#edinburghEuropeName {
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  margin-top: 0px;
+  color: white;
+  transition: 0.5s;
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+#parisEuropeLocation {
+  image-rendering: pixelated;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-image: url(../img/commonAnimSheet/flags/french/frenchColony4.gif);
+  /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 670px;
+  top: 750px;
+  width: 110px;
+  height: 175px;
+  transform: scale(0.75);
+  background-position: center;
+  margin: 0 auto;
+  transition: 0.5s ease;
+  /* transform: rotate(45deg) skew(0deg, 0deg); */
+}
+#parisEuropeTab {
+  text-align:center;
+    user-select: none;
+  font-family: Trebuchet MS;
+  position: absolute;
+  margin-top: 150px;
+  margin-left: -30px;
+  display:inline-block;
+  width: 70px;
+  background-color: rgba(13, 20, 132, 0.7);
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+#parisEuropeName {
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  margin-top: 0px;
+  color: white;
+  transition: 0.5s;
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+#bordeauxEuropeLocation {
+  image-rendering: pixelated;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-image: url(../img/commonAnimSheet/flags/french/frenchColony3.gif);
+  /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 510px;
+  top: 900px;
+  width: 110px;
+  height: 175px;
+  transform: scale(0.75);
+  background-position: center;
+  margin: 0 auto;
+  transition: 0.5s ease;
+  
+}
+#bordeauxEuropeTab {
+  text-align:center;
+    user-select: none;
+  font-family: Trebuchet MS;
+  position: absolute;
+  margin-top: 150px;
+  margin-left: -40px;
+  display:inline-block;
+  width: 80px;
+  background-color: rgba(13, 20, 132, 0.7);
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+#bordeauxEuropeName {
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  margin-top: 0px;
+  color: white;
+  transition: 0.5s;
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+
+#madridEuropeLocation {
+  image-rendering: pixelated;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-image: url(../img/commonAnimSheet/flags/spain/spanishColony4.gif);
+  /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 350px;
+  top: 1050px;
+  width: 110px;
+  height: 175px;
+  transform: scale(0.75);
+  background-position: center;
+  margin: 0 auto;
+  transition: 0.5s ease;
+  
+}
+#madridEuropeTab {
+  text-align:center;
+    user-select: none;
+  font-family: Trebuchet MS;
+  position: absolute;
+  margin-top: 150px;
+  margin-left: -40px;
+  display:inline-block;
+  width: 80px;
+  background-color:rgba(255, 251, 0, 0.849);
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+#madridEuropeName {
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  margin-top: 0px;
+  color: white;
+  transition: 0.5s;
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+
+#sevilleEuropeLocation {
+  image-rendering: pixelated;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-image: url(../img/commonAnimSheet/flags/spain/spanishColony3.gif);
+  /* background-image: url(../img/soldierAnimSheet/marching2/marchAnim2.gif); */
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 225px;
+  top: 1175px;
+  width: 110px;
+  height: 175px;
+  transform: scale(0.75);
+  background-position: center;
+  margin: 0 auto;
+  transition: 0.5s ease;
+  
+}
+#sevilleEuropeTab {
+  text-align:center;
+    user-select: none;
+  font-family: Trebuchet MS;
+  position: absolute;
+  margin-top: 150px;
+  margin-left: -30px;
+  display:inline-block;
+  width: 60px;
+  background-color:rgba(255, 251, 0, 0.849);
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+#sevilleEuropeName {
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  margin-top: 0px;
+  color: white;
+  transition: 0.5s;
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+
+/* CITY TAB */
+
+#cityTab {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image: url(../img/woodBG2.png);
+  background-size: contain;
+  font-size: 15px;
+  width: 150px;
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+  margin-top: 100px;
+  transition: all 0s;
+  visibility: hidden;
+}
+
+#cityName {
+  margin-top: 10px;
+margin-left: 10px;
+margin-right: 10px;
+font-weight: bold;
+color: white;
+margin-bottom: 5px;
+}
+#cityFoundedYear {
+  margin-top: 5px;
+margin-left: 10px;
+margin-right: 10px;
+font-weight: bold;
+color: white;
+margin-bottom: 5px;
+}
+#cityOwner {
+  margin-top: 5px;
+margin-left: 10px;
+margin-right: 10px;
+font-weight: bold;
+color: white;
+margin-bottom: 5px;
+}
+#homeCitySelectTab {
+  text-align:center;
+  user-select: none;
+  font-family: Trebuchet MS;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display:inline-block;
+  width: 170px;
+  /* background: rgba(0,0,0,0.7); */
+  background-image: url(../img/woodBG2.png);
+  background-size: contain;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  visibility: hidden;
+  transition: 0.1s;
+}
+#homeCitySelectInfo {
+  font-weight: bold;
+  margin-top: 0px;
+  color: white;
+  margin-bottom: 10px;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#homeCitySelectImage {
+  margin-top: 10px;
+  margin-left: 10px;
+   margin-right: 10px;
+   margin-bottom: 0px;
+   width: 150px;
+   height: 15vh;
+   /* border-radius: 20px;
+   border: none; */
+   overflow: hidden;
+   background-image: url(../img/londonSelect.jpg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+}
+#cityIcon {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 10%;
+  width: 130px;
+  height: 100px;
+  /* border-radius: 20px;
+  border: none; */
+  overflow: hidden;
+  background-image: url(../img/nativeIcon.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
